@@ -28,7 +28,6 @@
     - admission requirements
     - tuition cost
   - skills/programs learned
-    - topics covered: mixed realities, immersive environments, usability, spatial relations, human factors
     - Adobe
     - Maya
     - coding languages
@@ -79,6 +78,8 @@
 - material.io
 
 
+
+
 ## Inspiration 
 ### Links to include
 - https://www.georgebrown.ca/programs/interaction-design-and-development-program-g103/
@@ -86,6 +87,7 @@
 
 ### Website layout
 - https://www.rmcad.edu/program/on-campus/graphic-design-school/
+- http://www.designyep.com/university-and-college-websites-inspiration/
 - https://www.pinterest.ca/pin/212654413634609085/
 - https://www.pinterest.ca/pin/212654413634609015/
 - https://www.pinterest.ca/pin/212654413634609003/
