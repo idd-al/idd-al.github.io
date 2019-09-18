@@ -1,4 +1,11 @@
-body {
-	background-color: blue;
-	background-color: lightblue;
+html {
+	--primary-a ;
+	--primary-b: ;
+	--secondary-a: ;
+	--secondary-b: ;
+	--foreground: #080705;
+	--background: #eff4f2;
+
+	--on-foreground: #eff4f2;
+	--on-background: #080705;
 }
