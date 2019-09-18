@@ -75,15 +75,28 @@
   - copyright
 
 ## Design Guide
-- material.io
+- Note: material.io
+
+### Colours
+![Colour palette](https://coolors.co/export/png/080705-005293-39a9db-80d5fc-eff4f2 "Colour palette")
+- #080705: header, footer; text on light bg
+- #005293: icon/img bg
+- #39A9DB: text/blurb
+- #80D5FC: accent
+- #EFF4F2: text on dark bg
+
+- colour blocks take up 100% width
+
+### Fonts
+![image](https://user-images.githubusercontent.com/52459805/65110811-9e4b1f80-d9a7-11e9-9b52-ebd6845e62e4.png)
 
 
 
 
 ## Inspiration 
 ### Links to include
-- https://www.georgebrown.ca/programs/interaction-design-and-development-program-g103/
-- http://yearendshow.schoolofdesign.ca/category/interaction-design-and-development/
+- [x] https://www.georgebrown.ca/programs/interaction-design-and-development-program-g103/
+- [x] http://yearendshow.schoolofdesign.ca/category/interaction-design-and-development/
 
 ### Website layout
 - https://www.rmcad.edu/program/on-campus/graphic-design-school/
