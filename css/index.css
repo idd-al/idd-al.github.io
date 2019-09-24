@@ -1,11 +1,139 @@
-html {
-	--primary-a ;
-	--primary-b: ;
-	--secondary-a: ;
-	--secondary-b: ;
-	--foreground: #080705;
-	--background: #eff4f2;
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-	--on-foreground: #eff4f2;
+html {
+	/****************
+	COLOURS
+	*****************/
+
+	--primary: #306c99;
+	--primary-light: #71aac8;
+	--primary-dark: #194169;
+	--secondary: #6b2b84;
+	--secondary-light: #a967aa;
+	--secondary-dark: #412669;
+	--background-light: #ffffff;
+	--background-dark: #080705;
+
+	--on-reg: #ffffff;
+	--on-light: #080705;
+	--on-dark: #ffffff;
 	--on-background: #080705;
+
+
+	/****************
+	FONT
+	*****************/
+
+	--heading: font-family: 'Montserrat', sans-serif;
+	--body:  font-family: 'Roboto', sans-serif;
+
+}
+
+
+/****************
+GENERAL
+*****************/
+body {
+	margin: 0 ;
+}
+
+.centered-text {
+	text-align: justify;
+	margin: 0 auto;
+}
+
+.heading h1, h2, h3, h4 {
+	font-family: 'Montserrat', sans-serif;
+}
+.heading h1 {font-weight: 800;}
+.heading h2 {font-weight: 700;}
+.heading h3 {font-weight: 600;}
+.heading h4 {font-weight: 500;}
+
+
+.body-text p, label, figcaption, li {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+
+
+
+
+
+/******************************************
+HEADING
+******************************************/
+.topbar {
+	background-color: var(--background-dark);
+	color: var(--on-dark);
+	top: 0;
+	/*position: fixed;
+	z-index: 9999;
+	top: 0;*/
+}
+
+
+
+/******************************************
+MAIN
+******************************************/
+
+	/****************
+	Banner photo
+	*****************/
+	.banner-photo img {
+		width: 100%;
+	}
+	
+
+/****************
+	OVERVIEW, SKILLS
+*****************/
+/*FORMAT IN GRID*/
+	.icon-grid, .program-grid {
+		padding: 0;
+		/*GRID*/
+	}
+	.icon-label, .program-img li {
+		list-style: none;
+		text-align: center;
+		margin: 0 auto;
+	}
+	.icon-label i {
+		font-size: 3em;
+		display: block;
+	}
+	.program-img img {
+		width: 20%;
+	}
+
+
+/****************
+	PHOTOS
+*****************/
+	/*WILL CHANGE SIZE*/
+	.small-profile img {
+		width: 25%;
+		display: block;
+		margin: 0 auto;
+	}
+	.small-project img {
+		width: 25%;
+		justify-self: center; 
+	}
+	.alumni-photo img {
+		width: 25%;
+		justify-self: center;
+	}
+
+
+
+
+/******************************************
+FOOTER
+******************************************/
+.bottombar {
+	background-color: var(--background-dark);
+	color: var(--on-dark);
 }
