@@ -80,13 +80,14 @@
 ### Colours
 ![colour-palette](https://user-images.githubusercontent.com/52459805/65563593-17062a80-df18-11e9-96f3-48898bf4da44.png)
 
-'''- #0800705: header, footer, text on light background
+```
+- #0800705: header, footer, text on light background
 - #ffffff: main page background, text on dark background
 - #306c99: colour blocks for section blurbs
 - #6b2b84: icons + labels
 - #71aac8: accents on dark background
 - #a967aa: accents on dark background
-'''
+```
 
 ### Fonts
 ![image](https://user-images.githubusercontent.com/52459805/65564124-ef17c680-df19-11e9-918d-4bceeaf74e7a.png)
