@@ -6,27 +6,26 @@ html {
 	COLOURS
 	*****************/
 
-	--primary: #306c99;
-	--primary-light: #71aac8;
-	--primary-dark: #194169;
-	--secondary: #6b2b84;
-	--secondary-light: #a967aa;
-	--secondary-dark: #412669;
 	--background-light: #ffffff;
 	--background-dark: #080705;
-
-	--on-reg: #ffffff;
 	--on-light: #080705;
 	--on-dark: #ffffff;
-	--on-background: #080705;
+
+	--primary: #306c99;
+	--primary-light: #71aac8;
+	/*--primary-dark: #194169;*/
+	--secondary: #6b2b84;
+	--secondary-light: #a967aa;
+	/*--secondary-dark: #412669;*/
+
 
 
 	/****************
 	FONT
 	*****************/
 
-	--heading: font-family: 'Montserrat', sans-serif;
-	--body:  font-family: 'Roboto', sans-serif;
+	--heading: 'Montserrat', sans-serif;
+	--body: 'Roboto', sans-serif;
 
 }
 
@@ -35,31 +34,74 @@ html {
 GENERAL
 *****************/
 body {
-	margin: 0 ;
+	margin: 0;
 }
+
+/*HEADINGS*/
+.heading h1, h2, h3, h4 {
+	font-family: var(--heading);
+	margin: 0;
+}
+.heading h1 {font-weight: 800;}
+.heading h2 {
+	font-size: 1.5em;
+	font-weight: 700;
+	text-align: center; 
+	padding: 1em 2em 0;
+}
+.heading h3 {
+	font-size: 1.17em;
+	font-weight: 600;
+	padding: 1em 2em;
+}
+.heading h4 {
+	font-size: 1em;
+	font-weight: 500;
+}
+
+
+/*TEXT*/
+.body-text p, label, figcaption, li, a {
+	font-family: var(--body);
+	font-weight: 400;
+}
+.on-dark {color: var(--on-dark);}
+.on-light {color: var(--on-light);}
 
 .centered-text {
 	text-align: justify;
 	margin: 0 auto;
 }
 
-.heading h1, h2, h3, h4 {
-	font-family: 'Montserrat', sans-serif;
-}
-.heading h1 {font-weight: 800;}
-.heading h2 {font-weight: 700;}
-.heading h3 {font-weight: 600;}
-.heading h4 {font-weight: 500;}
-
-
-.body-text p, label, figcaption, li {
-	font-family: 'Roboto', sans-serif;
-	font-weight: 400;
+.section-blurb {
+	padding: 1em 2em 2em;
+	margin: 0;
 }
 
 
+/*COLOURS*/
+.color-block-primary {
+	background-color: var(--primary);
+	color: var(--on-dark);
+}
 
+.color-icon-secondary {
+	color: var(--secondary);
+}
 
+/*LINKS*/
+.link-on-light a {
+	color: var(--on-light);
+	text-decoration: none;
+}
+.link-on-dark a {
+	color: var(--on-dark);
+	text-decoration: none;
+}
+.link-hover a:hover {
+	color: var(--secondary-light);
+	text-decoration: underline;
+}
 
 /******************************************
 HEADING
@@ -67,29 +109,53 @@ HEADING
 .topbar {
 	background-color: var(--background-dark);
 	color: var(--on-dark);
-	top: 0;
-	/*position: fixed;
+	position: fixed;
 	z-index: 9999;
-	top: 0;*/
+	top: 0;
+	width: 100%;
+}
+.topbar-grid {
+	padding: 1em;
+	margin: 0;
+	display: grid;
+	grid-template-columns: 2em auto;
+	grid-template-areas: 
+	"men nam"
+	".	 sbt";
+	grid-column-gap: .5em;
+}
+.menu-icon {
+	grid-area: men;
+	font-size: 1.5em;
+}
+.website-name {
+	grid-area: nam;
+	margin: 0;
+}
+.website-subtitle {
+	grid-area: sbt;
+	margin: 0;
 }
 
-
-
+.topbar-heading h1 {
+	font-size: 1em;
+}
 /******************************************
 MAIN
 ******************************************/
 
-	/****************
-	Banner photo
-	*****************/
-	.banner-photo img {
-		width: 100%;
-	}
+/****************
+Banner photo
+*****************/
+.banner-photo img {
+	width: 100%;
+}
 	
 
 /****************
-	OVERVIEW, SKILLS
+OVERVIEW, SKILLS
 *****************/
+
 /*FORMAT IN GRID*/
 	.icon-grid, .program-grid {
 		padding: 0;
@@ -105,7 +171,7 @@ MAIN
 		display: block;
 	}
 	.program-img img {
-		width: 20%;
+		/*width: 20%;*/
 	}
 
 
@@ -136,4 +202,15 @@ FOOTER
 .bottombar {
 	background-color: var(--background-dark);
 	color: var(--on-dark);
+	padding: 1em 2em;
+}
+.bottombar h4 {
+	text-align: center;
+}
+.bottombar ul {
+	padding: 0;
+}
+.bottombar li {
+	list-style: none;
+	text-align: center;
 }

@@ -78,18 +78,20 @@
 - Note: material.io
 
 ### Colours
-![Colour palette](https://coolors.co/export/png/080705-005293-39a9db-80d5fc-eff4f2 "Colour palette")
-- #080705: header, footer; text on light bg
-- #005293: icon/img bg
-- #39A9DB: text/blurb
-- #80D5FC: accent
-- #EFF4F2: text on dark bg
+![colour-palette](https://user-images.githubusercontent.com/52459805/65563593-17062a80-df18-11e9-96f3-48898bf4da44.png)
 
-- colour blocks take up 100% width
+'''
+- #0800705: header, footer, text on light background
+- #ffffff: main page background, text on dark background
+- #306c99: colour blocks for section blurbs
+- #6b2b84: icons + labels
+- #71aac8: accents on dark background
+- #a967aa: accents on dark background
+
+'''
 
 ### Fonts
-![image](https://user-images.githubusercontent.com/52459805/65110811-9e4b1f80-d9a7-11e9-9b52-ebd6845e62e4.png)
-- switch text colour if needed
+![image](https://user-images.githubusercontent.com/52459805/65564124-ef17c680-df19-11e9-918d-4bceeaf74e7a.png)
 
 
 
