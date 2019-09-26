@@ -21,29 +21,31 @@
 		<!--<div><a href="#"><img src="img/gbc-logo.png" alt="George Brown College logo"></a></div>-->
 
 		<!--Name-->
-		<h1 class="website-name">Interaction design and Development</h1>
-		<h4 class="website-subtitle">George Brown College | School of Design</h4>
+		<div id="website-name">
+			<h1>IDDxGBC</h1>
+		</div>
+		<!--<h4 class="website-subtitle">George Brown College | School of Design</h4>-->
 
 		<!--Main menu-->
-		<div>
+		<div id="main-menu">
 			<nav class="main-menu">
 				<input type="checkbox" id="toggle" aria-label="toggle menu open and close">
 				<label for="toggle" id="toggle-open"><i class="fas fa-bars"></i></label>
 				<label for="toggle" id="toggle-close"><i class="fas fa-times"></i></label>
 				<ul class="menu-items">
-					<li>Overview</li>
-					<li>Skills</li>
-					<li>Showcase
-						<ul>
+					<li><a href="#">Overview</a></li>
+					<li><a href="#">Skills</a></li>
+					<li><a href="#">Showcase</a>
+						<!--<ul>
 							<li>Designers of the future</li>
 							<li>Ongoing projects</li>
 							<li>Year End Show</li>
-						</ul>
+						</ul>-->
 					</li>
-					<li>Careers
-						<ul>
+					<li><a href="#">Careers</a>
+						<!--<ul>
 							<li>Our alumni</li>
-						</ul>
+						</ul>-->
 					</li>
 				</ul>
 			</nav>
@@ -54,9 +56,19 @@
 
 	<main>
 
+
+
 		<!--Banner-->
-		<div class="banner-photo"><img src="img/ideation-sticky-note.jpg" alt="sticky note brainstorming session"></div>
-		<!--Photo by You X Ventures on Unsplash-->
+		<div class="banner-container">
+			<img class="banner-image" src="img/sticky-note-bg.jpg" alt="sticky note brainstorming session">
+			<!--Photo by Patrick Perkins on Unsplash-->
+			<!--<h2 id=imageheading class="text-overlay">Interaction Design and Development</h2>
+			<h3 id=imagesubheading class="text-overlay">George Brown College | School of Design</h3>-->
+		</div>
+
+
+		<!--img/ideation-sticky-note.jpg
+		Photo by You X Ventures on Unsplash-->
 
 		<!--Program overview-->
 		<section class="centered-text">
@@ -83,10 +95,10 @@
 						<label>Immersive environments</label>
 					</li>
 					<!--Usability-->
-					<li>
+					<!--<li>
 						<i class="fas fa-tasks"></i>
 						<label>Usability</label>
-					</li>
+					</li>-->
 					<!--Spatial relations-->
 					<li>
 						<i class="fab fa-connectdevelop"></i>
@@ -186,34 +198,47 @@
 				sample work and what students have to say about the program below.</p>
 
 			<!--Designers of the future-->
-			<section class="small-profile">
+			<section id="designers-of-the-future">
 				<h3>Designers of the future</h3>
 
 				<!--Pacifica Northwest profile-->
-				<blockquote>
-					<div><img src="img/profile-one-crop.png" alt="student profile picture"></div>
+				<blockquote class="student-grid">
+					<div class="student-photo"><img src="img/profile-one-crop.png" alt="student profile picture"></div>
 					<!--Photo by allison griffith on Unsplash-->
-					<h4>Pacifica Northwest, first year student</h4>
-					<p><q>I was interested in the interaction design program because I wanted to gain experiences in different
-							types of design. Now that I'm here, I know I made the right choice.</q></p>
+					<div class="student-name">
+						<h4>Pacifica Northwest</h4>
+						<h4>Year 1</h4>
+					</div>
+					<p class="student-quote centered-text"><q>I was interested in the interaction design program because I wanted
+							to gain experiences in different types of design. Now that I'm here, I know I made the right choice.</q>
+					</p>
 				</blockquote>
 
 				<!--Tad Strange profile-->
-				<blockquote>
-					<div><img src="img/profile-two-crop.png" alt="student profile picture"></div>
+				<blockquote class="student-grid">
+					<div class="student-photo"><img src="img/profile-two-crop.png" alt="student profile picture"></div>
 					<!--Photo by Eduardo Dutra on Unsplash-->
-					<h4>Tad Strange, second year student</h4>
-					<p><q>I'm excited to build on what I learned in my first year. I'm a designer, Mom!</q></p>
+					<div class="student-name">
+						<h4>Tad Strange</h4>
+						<h4>Year 2</h4>
+					</div>
+					<p class="student-quote centered-text"><q>I'm excited to build on what I learned in my first year. I'm a
+							designer, Mom!</q>
+					</p>
 				</blockquote>
 
 				<!--Fiddleford McGucket profile-->
-				<blockquote>
-					<div><img src="img/profile-three-crop.png" alt="student profile picture"></div>
+				<blockquote class="student-grid">
+					<div class="student-photo"><img src="img/profile-three-crop.png" alt="student profile picture"></div>
 					<!--Photo by sean Kong on Unsplash-->
-					<h4>Wendy Corduroy, third year student</h4>
-					<p><q>I've really enjoyed my time the program. I'm looking forward to graduation and to being able to use the
-							skills I've gained here out in the real world to leave a positive impact.</q></p>
-					</bl>
+					<div class="student-name">
+						<h4>Wendy Corduroy</h4>
+						<h4>Year 3</h4>
+					</div>
+					<p class="student-quote centered-text"><q>I've really enjoyed my time the program. I'm looking forward to
+							graduation and to being able to use the skills I've gained here out in the real world to leave a positive
+							impact.</q></p>
+				</blockquote>
 			</section>
 
 			<!--Student projects-->

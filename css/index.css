@@ -5,18 +5,17 @@ html {
 	/****************
 	COLOURS
 	*****************/
-
-	--background-light: #ffffff;
-	--background-dark: #080705;
-	--on-light: #080705;
+	--background: #ffffff;
+	--primary: #101530;
+	--on-light: #101530;
 	--on-dark: #ffffff;
 
-	--primary: #306c99;
-	--primary-light: #71aac8;
-	/*--primary-dark: #194169;*/
-	--secondary: #6b2b84;
-	--secondary-light: #a967aa;
-	/*--secondary-dark: #412669;*/
+	--secondary: #3e78b2;
+	--secondary-light: #71aac8;
+	/*--secondary-dark: #194169;*/
+	--third: #6b2b84;
+	--third-light: #a967aa;
+	/*--third-dark: #412669;*/
 
 
 
@@ -37,12 +36,13 @@ GENERAL
 	margin: 0;
 }*/
 
+
 /*HEADINGS*/
 .heading h1, h2, h3, h4 {
 	font-family: var(--heading);
 	margin: 0;
 }
-.heading h1 {font-weight: 800;}
+.heading h1 {font-weight: 800; font-size: 1.5em;}
 .heading h2 {
 	font-size: 1.5em;
 	font-weight: 700;
@@ -89,6 +89,11 @@ GENERAL
 	color: var(--secondary);
 }
 
+
+
+
+
+
 /*LINKS*/
 .link-on-light a {
 	color: var(--on-light);
@@ -106,8 +111,35 @@ GENERAL
 /******************************************
 HEADING
 ******************************************/
+
+/*topbar, 77px*/
+.topbar {
+	background-color: var(--primary);
+	color: var(--on-dark);
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 9997;
+}
+.topbar-grid {
+	display: grid; 
+	grid-template-columns: 2em auto; 
+	grid-template-areas: 
+	"menu name";
+	padding: 1.5em 2em;
+	grid-gap: 1em;
+}
+#main-menu {
+	grid-area: menu;
+}
+#website-name {
+	grid-area: name;
+}
+
+
 /*Menu toggle*/
 #toggle-open, #toggle-close {
+	font-size: 1.5em;
 	position: absolute;
 	z-index: 9999;
 }
@@ -130,46 +162,32 @@ input[type=checkbox]:checked ~ #toggle-open {
 	display: none;
 }
 
+/*Menu panel*/
 .menu-items {
+	background-color: var(--background);
+	color: var(--primary);
 	position: absolute;
+	z-index: 9998;
+	width: 80%;
+	height: 100vh;
+	overflow: hidden;
+	left: 0;
+	top:77px;
+}
+.menu-items li {
+	list-style: none;
+	padding: 1em 2em;
+}
+.menu-items a {
+	color: var(--primary);
+	text-decoration: none; 
 }
 
 
 
-/*.topbar {
-	background-color: var(--background-dark);
-	color: var(--on-dark);
-	position: fixed;
-	z-index: 9999;
-	top: 0;
-	width: 100%;
-}*/
-/*.topbar-grid {
-	padding: 1em;
-	margin: 0;
-	display: grid;
-	grid-template-columns: 2em auto;
-	grid-template-areas: 
-	"men nam"
-	".	 sbt";
-	grid-column-gap: .5em;
-}*/
-/*.menu-icon {
-	grid-area: men;
-	font-size: 1.5em;
-}
-.website-name {
-	grid-area: nam;
-	margin: 0;
-}
-.website-subtitle {
-	grid-area: sbt;
-	margin: 0;
-}
 
-.topbar-heading h1 {
-	font-size: 1em;
-}*/
+
+
 /******************************************
 MAIN
 ******************************************/
@@ -177,10 +195,26 @@ MAIN
 /****************
 Banner photo
 *****************/
-.banner-photo img {
+.banner-container {
 	width: 100%;
 }
-	
+/*.banner-image {
+	position: absolute; 
+	z-index: 9997;
+}
+
+#imageheading, #imagesubheading {
+	position: absolute;
+	z-index: 9998;
+	padding: 0;
+	margin: 0 auto;
+}
+#imageheading {
+	top: 30px;
+	margin: 0 auto;}
+#imagesubheading {
+	top: 100px;
+}*/
 
 /****************
 OVERVIEW, SKILLS
@@ -188,32 +222,62 @@ OVERVIEW, SKILLS
 
 /*FORMAT IN GRID*/
 	.icon-grid, .program-grid {
-		padding: 0;
-		/*GRID*/
+		position: relative; 
+		padding: 1em 2em;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-auto-rows: 6em;
+		grid-gap: 1em;
 	}
 	.icon-label, .program-img li {
 		list-style: none;
 		text-align: center;
+		align-items: center;
 		margin: 0 auto;
 	}
 	.icon-label i {
-		font-size: 3em;
+		font-size: 2em;
 		display: block;
-	}
-	.program-img img {
-		/*width: 20%;*/
 	}
 
 
 /****************
 	PHOTOS
 *****************/
-	/*WILL CHANGE SIZE*/
-	.small-profile img {
-		width: 25%;
-		display: block;
-		margin: 0 auto;
+	.student-grid {
+		padding: 1em 2em;
+		display: grid;
+		grid-template-columns: 5.5em auto;
+		grid-template-areas: 
+		"img name"
+		"quo quo";
+		grid-gap: 1em;
 	}
+	#designers-of-the-future blockquote:nth-of-type(2n) {
+		grid-template-columns: auto 5.5em;
+		grid-template-areas: 
+		"name img"
+		"quo quo";
+	}
+	#designers-of-the-future .student-name:nth-of-type(2n) {
+		text-align: center;
+	}
+
+	.student-photo {
+		grid-area: img;
+		max-width: 100%;
+	}
+	.student-name {
+		grid-area: name;
+		align-self: center;
+	}
+	.student-year {
+		grid-area: year;
+	}
+	.student-quote {
+		grid-area: quo;
+	}
+
 	.small-project img {
 		width: 25%;
 		justify-self: center; 
@@ -230,7 +294,7 @@ OVERVIEW, SKILLS
 FOOTER
 ******************************************/
 .bottombar {
-	background-color: var(--background-dark);
+	background-color: var(--primary);
 	color: var(--on-dark);
 	padding: 1em 2em;
 }
