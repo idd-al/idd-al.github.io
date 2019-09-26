@@ -33,9 +33,9 @@ html {
 /****************
 GENERAL
 *****************/
-body {
+/*body {
 	margin: 0;
-}
+}*/
 
 /*HEADINGS*/
 .heading h1, h2, h3, h4 {
@@ -106,15 +106,45 @@ body {
 /******************************************
 HEADING
 ******************************************/
-.topbar {
+/*Menu toggle*/
+#toggle-open, #toggle-close {
+	position: absolute;
+	z-index: 9999;
+}
+input[type=checkbox] {
+	display: none;
+}
+#toggle-close {
+	display: none;
+}
+input[type=checkbox] ~ ul {
+	display: none;
+}
+input[type=checkbox]:checked ~ ul {
+	display: block;
+}
+input[type=checkbox]:checked ~ #toggle-close {
+	display: block;
+}
+input[type=checkbox]:checked ~ #toggle-open {
+	display: none;
+}
+
+.menu-items {
+	position: absolute;
+}
+
+
+
+/*.topbar {
 	background-color: var(--background-dark);
 	color: var(--on-dark);
 	position: fixed;
 	z-index: 9999;
 	top: 0;
 	width: 100%;
-}
-.topbar-grid {
+}*/
+/*.topbar-grid {
 	padding: 1em;
 	margin: 0;
 	display: grid;
@@ -123,8 +153,8 @@ HEADING
 	"men nam"
 	".	 sbt";
 	grid-column-gap: .5em;
-}
-.menu-icon {
+}*/
+/*.menu-icon {
 	grid-area: men;
 	font-size: 1.5em;
 }
@@ -139,7 +169,7 @@ HEADING
 
 .topbar-heading h1 {
 	font-size: 1em;
-}
+}*/
 /******************************************
 MAIN
 ******************************************/
