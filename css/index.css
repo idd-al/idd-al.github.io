@@ -10,12 +10,12 @@ html {
 	--on-light: #101530;
 	--on-dark: #ffffff;
 
-	--secondary: #3e78b2;
-	--secondary-light: #71aac8;
-	/*--secondary-dark: #194169;*/
-	--third: #6b2b84;
-	--third-light: #a967aa;
-	/*--third-dark: #412669;*/
+	--secondary-a: #306c99;
+	--secondary-a-light: #71aac8;
+	/*--secondary-a-dark: #194169;*/
+	--secondary-b: #6b2b84;
+	--secondary-b-light: #a967aa;
+	/*--secondary-b-dark: #412669;*/
 
 
 
@@ -32,10 +32,6 @@ html {
 /****************
 GENERAL
 *****************/
-/*body {
-	margin: 0;
-}*/
-
 
 /*HEADINGS*/
 .heading h1, h2, h3, h4 {
@@ -47,7 +43,8 @@ GENERAL
 	font-size: 1.5em;
 	font-weight: 700;
 	text-align: center; 
-	padding: 1em 2em 0;
+	padding-bottom: .5em;
+	/*padding: 1em 2em 0;*/
 }
 .heading h3 {
 	font-size: 1.17em;
@@ -58,7 +55,10 @@ GENERAL
 	font-size: 1em;
 	font-weight: 500;
 }
-
+.subheading {
+	background-color: var(--secondary-a);
+	color: var(--on-dark);
+}
 
 /*TEXT*/
 .body-text p, label, figcaption, li, a {
@@ -68,14 +68,15 @@ GENERAL
 .on-dark {color: var(--on-dark);}
 .on-light {color: var(--on-light);}
 
+/*SPACING*/
 .centered-text {
 	text-align: justify;
 	margin: 0 auto;
 }
 
 .section-blurb {
-	padding: 1em 2em 2em;
 	margin: 0;
+	padding: 2em;
 }
 
 
@@ -86,7 +87,7 @@ GENERAL
 }
 
 .color-icon-secondary {
-	color: var(--secondary);
+	color: var(--secondary-b);
 }
 
 
@@ -104,7 +105,7 @@ GENERAL
 	text-decoration: none;
 }
 .link-hover a:hover {
-	color: var(--secondary-light);
+	color: var(--secondary-a-light);
 	text-decoration: underline;
 }
 
@@ -117,6 +118,7 @@ HEADING
 	background-color: var(--primary);
 	color: var(--on-dark);
 	width: 100%;
+	/*box-shadow: 3px 3px 3px 6px #101530;*/
 	position: fixed;
 	top: 0;
 	z-index: 9997;
@@ -172,7 +174,7 @@ input[type=checkbox]:checked ~ #toggle-open {
 	height: 100vh;
 	overflow: hidden;
 	left: 0;
-	top:77px;
+	top:77.6px;
 }
 .menu-items li {
 	list-style: none;
@@ -222,12 +224,12 @@ OVERVIEW, SKILLS
 
 /*FORMAT IN GRID*/
 	.icon-grid, .program-grid {
-		position: relative; 
 		padding: 1em 2em;
 		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-auto-rows: 6em;
+		grid-template-columns: 7em 7em;
+		grid-auto-rows: 7em;
 		grid-gap: 1em;
+		justify-content: center;
 	}
 	.icon-label, .program-img li {
 		list-style: none;
@@ -240,9 +242,8 @@ OVERVIEW, SKILLS
 		display: block;
 	}
 
-
 /****************
-	PHOTOS
+	STUDENT PROFILE
 *****************/
 	.student-grid {
 		padding: 1em 2em;
@@ -253,15 +254,14 @@ OVERVIEW, SKILLS
 		"quo quo";
 		grid-gap: 1em;
 	}
+
 	#designers-of-the-future blockquote:nth-of-type(2n) {
 		grid-template-columns: auto 5.5em;
 		grid-template-areas: 
 		"name img"
 		"quo quo";
 	}
-	#designers-of-the-future .student-name:nth-of-type(2n) {
-		text-align: center;
-	}
+
 
 	.student-photo {
 		grid-area: img;
@@ -270,6 +270,7 @@ OVERVIEW, SKILLS
 	.student-name {
 		grid-area: name;
 		align-self: center;
+		justify-self: center;
 	}
 	.student-year {
 		grid-area: year;
@@ -277,15 +278,48 @@ OVERVIEW, SKILLS
 	.student-quote {
 		grid-area: quo;
 	}
+	/*.student-name:nth-child(2n) {
+		justify-self: right;
+	}*/
 
-	.small-project img {
-		width: 25%;
-		justify-self: center; 
+
+/****************
+STUDENT PROJECTS
+*****************/
+	.project-grid > figure {
+		padding: 1em 2em;
 	}
-	.alumni-photo img {
-		width: 25%;
-		justify-self: center;
+	.project-image img {
+		width: 100%;
 	}
+
+	.year-end-grid > figure {
+		padding: 1em 2em;
+	}
+
+	.caption {
+		background-color: var(--secondary-b);
+		color: var(--on-dark);
+		padding: .5em;
+	}
+
+
+/****************
+CAREERS/ALUMNI
+*****************/
+#careers ul {
+	padding-top: .5em;
+	padding-left: 2em;
+}
+
+.alumni-grid {	
+	display: grid;
+	padding: 1em 2em;
+}
+.alumni-grid p {
+	padding: .5em 0;
+}
+
 
 
 
@@ -296,10 +330,14 @@ FOOTER
 .bottombar {
 	background-color: var(--primary);
 	color: var(--on-dark);
-	padding: 1em 2em;
+	padding: 2em;
+}
+.bottombar section {
+	padding-bottom: 1em;
 }
 .bottombar h4 {
 	text-align: center;
+	padding-bottom: .5em;
 }
 .bottombar ul {
 	padding: 0;
@@ -307,4 +345,17 @@ FOOTER
 .bottombar li {
 	list-style: none;
 	text-align: center;
+	padding: .2em 0;
+}
+
+#contact {
+	display: none;
+}
+
+.social-media {
+	text-align: center; 
+}
+.social-media li {
+	display: inline-block;
+	padding: .5em;
 }
