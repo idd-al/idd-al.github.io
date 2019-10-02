@@ -50,7 +50,7 @@
 					</li>
 					<!--<li><div><a href="#"><img src="img/gbc-logo.png" alt="George Brown College logo"></div></li>-->
 				</ul>
-				
+
 			</nav>
 		</div>
 
@@ -65,8 +65,14 @@
 		<div class="banner-container">
 			<img class="banner-image" src="img/sticky-note-bg.jpg" alt="sticky note brainstorming session">
 			<!--Photo by Patrick Perkins on Unsplash-->
-			<!--<h2 id=imageheading class="text-overlay">Interaction Design and Development</h2>
-			<h3 id=imagesubheading class="text-overlay">George Brown College | School of Design</h3>-->
+			<ul class="text-overlay">
+				<li>
+					<h2>Interaction Design and Development</h2>
+				</li>
+				<li>
+					<h2>George Brown College | School of Design</h2>
+				</li>
+			</ul>
 		</div>
 
 
@@ -161,7 +167,7 @@
 
 
 			<!--Skills-->
-			<ul class="icon-grid icon-label color-icon-secondary">
+			<ul id="skills" class="icon-grid icon-label color-icon-secondary">
 				<!--Usability testing-->
 				<li>
 					<i class="fas fa-tasks"></i>
@@ -183,6 +189,8 @@
 					<label>Real world projects</label>
 				</li>
 			</ul>
+
+			<!--<hr>-->
 
 			<!--Programs; icons from icons8-->
 			<ul class="program-grid program-img">
@@ -210,48 +218,55 @@
 			</article>
 
 			<!--Designers of the future-->
-			<section id="designers-of-the-future">
+			<section id="designers-of-the-future" class="designers-of-the-future">
 				<h3 class="subheading">Designers of the future</h3>
 
-				<!--Pacifica Northwest profile-->
-				<blockquote class="student-grid">
-					<div class="student-photo"><img src="img/profile-one-crop.png" alt="student profile picture"></div>
-					<!--Photo by allison griffith on Unsplash-->
-					<div class="student-name">
-						<h4>Pacifica Northwest</h4>
-						<h4>Year 1</h4>
-					</div>
-					<p class="student-quote centered-text"><q>I was interested in the interaction design program because I wanted
-							to gain experiences in different types of design. Now that I'm here, I know I made the right choice.</q>
-					</p>
-				</blockquote>
+				<section class="big-student-grid">
+					<!--Pacifica Northwest profile-->
+					<blockquote class="student-grid">
+						<div class="student-photo"><img src="img/profile-one-crop.png" alt="student profile picture"></div>
+						<!--Photo by allison griffith on Unsplash-->
+						<div class="student-name">
+							<h4>Pacifica Northwest</h4>
+							<h4>Year 1</h4>
+						</div>
+						<p class="student-quote centered-text"><q>I was interested in the interaction design program because I
+								wanted
+								to gain experiences in different types of design. Now that I'm here, I know I made the right choice.</q>
+						</p>
+					</blockquote>
 
-				<!--Tad Strange profile-->
-				<blockquote class="student-grid">
-					<div class="student-photo"><img src="img/profile-two-crop.png" alt="student profile picture"></div>
-					<!--Photo by Eduardo Dutra on Unsplash-->
-					<div class="student-name">
-						<h4>Tad Strange</h4>
-						<h4>Year 2</h4>
-					</div>
-					<p class="student-quote centered-text"><q>I'm excited to build on what I learned in my first year. I'm a
-							designer, Mom!</q>
-					</p>
-				</blockquote>
 
-				<!--Wendy Corduroy profile-->
-				<blockquote class="student-grid">
-					<div class="student-photo"><img src="img/profile-three-crop.png" alt="student profile picture"></div>
-					<!--Photo by sean Kong on Unsplash-->
-					<div class="student-name">
-						<h4>Wendy Corduroy</h4>
-						<h4>Year 3</h4>
-					</div>
-					<p class="student-quote centered-text"><q>I've really enjoyed my time the program. I'm looking forward to
-							graduation and to being able to use the skills I've gained here out in the real world to leave a positive
-							impact.</q></p>
-				</blockquote>
+					<!--Tad Strange profile-->
+					<blockquote class="student-grid">
+						<div class="student-photo"><img src="img/profile-two-crop.png" alt="student profile picture"></div>
+						<!--Photo by Eduardo Dutra on Unsplash-->
+						<div class="student-name">
+							<h4>Tad Strange</h4>
+							<h4>Year 2</h4>
+						</div>
+						<p class="student-quote centered-text"><q>I'm excited to build on what I learned in my first year. I'm a
+								designer, Mom!</q>
+						</p>
+					</blockquote>
+
+
+					<!--Wendy Corduroy profile-->
+					<blockquote class="student-grid">
+						<div class="student-photo"><img src="img/profile-three-crop.png" alt="student profile picture"></div>
+						<!--Photo by sean Kong on Unsplash-->
+						<div class="student-name">
+							<h4>Wendy Corduroy</h4>
+							<h4>Year 3</h4>
+						</div>
+						<p class="student-quote centered-text"><q>I've really enjoyed my time the program. I'm looking forward to
+								graduation and to being able to use the skills I've gained here out in the real world to leave a
+								positive
+								impact.</q></p>
+					</blockquote>
+				</section>
 			</section>
+
 
 			<!--Student projects-->
 			<section class="project-grid">
@@ -293,26 +308,37 @@
 		</section>
 
 		<!--Year End Show-->
-		<section class="year-end-grid">
+		<section>
 			<article class="section-blurb centered-text color-block-primary">
 				<h2>Year End Show</h2>
 				<p>Projects from IDD students at the School of Design's NEXT (2019) Year End
-				Show, in collaboration with ShowGBC.</p>
+					Show, in collaboration with ShowGBC.</p>
 			</article>
 
-			<!--Glasses composite-->
-			<figure class="project-image">
-				<img src="img/tech-drawing-two.jpg" alt="glasses composite">
-				<!--Photo by Matthew Fassnacht on Unsplash-->
-				<figcaption class="caption">Soos, AR glasses</figcaption>
-			</figure>
+			<section class="year-end-grid">
+				<!--Glasses composite-->
+				<figure class="project-image">
+					<img src="img/tech-drawing-two.jpg" alt="glasses composite">
+					<!--Photo by Matthew Fassnacht on Unsplash-->
+					<figcaption class="caption">Soos, Photoshop composite</figcaption>
+				</figure>
+
+
+				<!--AR app-->
+				<figure class="project-image">
+					<img src="img/ar-app.jpg" alt="glasses composite">
+					<!--Photo by Patrick Schneider on Unsplash-->
+					<figcaption class="caption">Fiddleford, AR app</figcaption>
+				</figure>
+			</section>
+
 
 		</section>
 
-		
+
 		<!--Careers-->
 		<section class="body-text">
-			
+
 
 			<!--Career list-->
 			<article id="careers" class="color-block-primary section-blurb centered-text">
@@ -340,7 +366,7 @@
 					<div class="caption">
 						<h4>Pidge Gunderson</h4>
 						<h4>Mobile designer, TD Mobile</h4>
-					</div>					
+					</div>
 					<p class="centered-text">IDD taught me about how to design solutions, which helped me land a job.</p>
 				</blockquote>
 
@@ -352,7 +378,8 @@
 						<h4>Lance McClain</h4>
 						<h4>SEO specialist, Nexus Systems Group</h4>
 					</div>
-					<p class="centered-text">What I've learned about UX in the IDD program has really helped me excel in my work in search engine
+					<p class="centered-text">What I've learned about UX in the IDD program has really helped me excel in my work
+						in search engine
 						optimization, which depends on how users interact with applications.</p>
 				</blockquote>
 
@@ -364,7 +391,8 @@
 						<h4>Keith G.</h4>
 						<h4>Web developer, IBM</h4>
 					</div>
-					<p class="centered-text">IDD gives you the chance to learn and practice a variety of coding languages, so now I get to use my skills
+					<p class="centered-text">IDD gives you the chance to learn and practice a variety of coding languages, so now
+						I get to use my skills
 						to create products that provide users with a great experience.</p>
 				</blockquote>
 			</section>

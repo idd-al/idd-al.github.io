@@ -92,9 +92,6 @@ GENERAL
 
 
 
-
-
-
 /*LINKS*/
 .link-on-light a {
 	color: var(--on-light);
@@ -110,7 +107,7 @@ GENERAL
 }
 
 /******************************************
-HEADING
+HEADER
 ******************************************/
 
 /*topbar, 77px*/
@@ -118,7 +115,7 @@ HEADING
 	background-color: var(--primary);
 	color: var(--on-dark);
 	width: 100%;
-	/*box-shadow: 3px 3px 3px 6px #101530;*/
+	box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2);
 	position: fixed;
 	top: 0;
 	z-index: 9997;
@@ -199,30 +196,26 @@ Banner photo
 *****************/
 .banner-container {
 	width: 100%;
+	position: relative;
 }
-/*.banner-image {
-	position: absolute; 
-	z-index: 9997;
+.text-overlay {
+	display: none;
+	padding: 2em;
+	list-style: none;
+	position: absolute;
+	bottom: 0; 
+	width: 100%;
+}
+.text-overlay li h2 {
+	padding: .25em;
+	color: var(--on-dark);
+	text-align: left;
 }
 
-#imageheading, #imagesubheading {
-	position: absolute;
-	z-index: 9998;
-	padding: 0;
-	margin: 0 auto;
-}
-#imageheading {
-	top: 30px;
-	margin: 0 auto;}
-#imagesubheading {
-	top: 100px;
-}*/
 
 /****************
 OVERVIEW, SKILLS
 *****************/
-
-/*FORMAT IN GRID*/
 	.icon-grid, .program-grid {
 		padding: 1em 2em;
 		display: grid;
@@ -231,16 +224,24 @@ OVERVIEW, SKILLS
 		grid-gap: 1em;
 		justify-content: center;
 	}
+	.program-grid { 
+		grid-auto-rows: 5em;
+	}
 	.icon-label, .program-img li {
 		list-style: none;
 		text-align: center;
 		align-items: center;
 		margin: 0 auto;
 	}
+	.program-img li {
+		align-self: center; 
+	}
+
 	.icon-label i {
 		font-size: 2em;
 		display: block;
 	}
+
 
 /****************
 	STUDENT PROFILE
@@ -255,12 +256,13 @@ OVERVIEW, SKILLS
 		grid-gap: 1em;
 	}
 
-	#designers-of-the-future blockquote:nth-of-type(2n) {
+	/*#designers-of-the-future blockquote:nth-of-type(2n) {
 		grid-template-columns: auto 5.5em;
 		grid-template-areas: 
 		"name img"
 		"quo quo";
-	}
+	}*/
+
 
 
 	.student-photo {
@@ -270,7 +272,7 @@ OVERVIEW, SKILLS
 	.student-name {
 		grid-area: name;
 		align-self: center;
-		justify-self: center;
+		justify-self: left;
 	}
 	.student-year {
 		grid-area: year;
@@ -278,9 +280,6 @@ OVERVIEW, SKILLS
 	.student-quote {
 		grid-area: quo;
 	}
-	/*.student-name:nth-child(2n) {
-		justify-self: right;
-	}*/
 
 
 /****************
@@ -293,7 +292,7 @@ STUDENT PROJECTS
 		width: 100%;
 	}
 
-	.year-end-grid > figure {
+	.project-image {
 		padding: 1em 2em;
 	}
 
@@ -359,3 +358,61 @@ FOOTER
 	display: inline-block;
 	padding: .5em;
 }
+
+
+
+/******************************************
+BREAKPOINTS
+******************************************/
+
+/****************
+MEDIA QUERY 1
+*****************/
+@media screen and (min-width: 560px) {
+	/*Banner + text overlay*/
+	.banner-imag {
+		 background-color: black;
+	}
+	.text-overlay {
+		display: block;
+	}
+
+	/*Icon grid, program grid*/
+	.icon-grid, .program-grid {
+		grid-template-columns: 7em 7em 7em 7em;
+	}
+
+
+	/*Designers of the future grid*/
+	.big-student-grid {
+		padding: 2em;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 1em;
+	}
+	.student-grid {
+		 padding: 0;
+		 grid-template-rows: 6em; 
+	}
+	.student-photo {
+		align-self: center; 
+	}
+
+	/*Year end show*/
+	.year-end-grid {
+		padding: 1em 2em;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 1em;
+	}
+	.project-image {
+		padding: 0;
+	}
+}/*last curly*/
+
+
+@media screen and (min-width: 650px) {
+
+	
+
+}/*last curly*/
