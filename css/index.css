@@ -6,11 +6,11 @@ html {
 	COLOURS
 	*****************/
 	--background: #ffffff;
-	--primary: #101530;
+	--primary: #0e1436;
 	--on-light: #101530;
 	--on-dark: #ffffff;
 
-	--secondary-a: #306c99;
+	--secondary-a: #1d98d1;
 	--secondary-a-light: #71aac8;
 	/*--secondary-a-dark: #194169;*/
 	--secondary-b: #6b2b84;
@@ -61,7 +61,7 @@ GENERAL
 }
 
 /*TEXT*/
-.body-text p, label, figcaption, li, a {
+.body-text p, label, li, a {
 	font-family: var(--body);
 	font-weight: 400;
 }
@@ -86,8 +86,8 @@ GENERAL
 	color: var(--on-dark);
 }
 
-.color-icon-secondary {
-	color: var(--secondary-b);
+.color-icon {
+	color: var(--primary);
 }
 
 
@@ -275,6 +275,9 @@ OVERVIEW, SKILLS
 		align-self: center;
 		justify-self: left;
 	}
+	.student-name h4 {
+		font-weight: 600;
+	}
 	.student-year {
 		grid-area: year;
 	}
@@ -299,8 +302,9 @@ STUDENT PROJECTS
 	}
 
 	.caption {
-		background-color: var(--secondary-b);
+		background-color: var(--secondary-a);
 		color: var(--on-dark);
+		font-family: var(--heading);
 		padding: .5em;
 	}
 
@@ -313,13 +317,18 @@ CAREERS/ALUMNI
 	padding-left: 2em;
 }
 
+
 .alumni-grid {	
 	display: grid;
+	grid-gap: 1em;
 	padding: 1em 2em;
 }
-.alumni-grid p {
-	padding: .5em 0;
+.alumni-name h4 {
+	font-weight: 600;
 }
+/*.alumni-grid p {
+	padding: 1em 0;
+}*/
 
 
 
@@ -400,17 +409,6 @@ MEDIA QUERY 1
 		align-self: center; 
 	}
 
-	/*Year end show*/
-	/*.year-end-grid {
-		padding: 1em 2em;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-gap: 1em;
-	}
-	.project-image {
-		padding: 0;
-	}*/
-
 
 	/*Student Projects - masonry-style columns*/
 	.project-grid, .year-end-grid {
@@ -428,13 +426,78 @@ MEDIA QUERY 1
 
 
 
-/*Careers*/
+	/*Careers*/
+
+	.alumni-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto 2fr;
+		grid-template-areas: 
+		"img name"
+		"img quo";
+	}
+	.alumni-grid img {
+		grid-area: img;
+	}
+	.alumni-name {
+		grid-area: name;
+	}
+	.alumni-grid p {
+		grid-area: quo;
+	}
+	/*#alumni-success  {
+		display: grid;
+		grid-template-columns: auto auto;
+	}
+	.alumni-grid {
+		grid-template-columns: auto auto;
+		grid-template-areas:
+		"img quo"
+		"cap quo";
+		column-gap: 1em; 
+	}
+	.alumni-grid img {
+		grid-area: img;
+	}
+	.caption {
+		grid-area: cap;
+	}
+	.alumni-grid p {
+		grid-area: quo;
+	}*/
+
+	.bottombar {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto auto auto;
+		grid-template-areas: 
+		"jump imp"
+		"social social"
+		"copy copy";		
+		grid-gap: 1em;
+	}
+	.bottombar section {
+		padding: 0;
+	}
+	#jump-to {
+		grid-area: jump;
+	}
+	#important-links {
+		grid-area: imp;
+	}
+	#social-media {
+		grid-area: social;
+	}
+	#copyright {
+		grid-area: copy;
+		text-align: center;
+	}
 
 }/*last curly*/
 
 
 @media screen and (min-width: 650px) {
 
-	
+
 
 }/*last curly*/
