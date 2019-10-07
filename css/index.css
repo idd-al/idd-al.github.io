@@ -15,7 +15,7 @@ html {
 	/*--secondary-a-dark: #194169;*/
 	--secondary-b: #6b2b84;
 	--secondary-b-light: #a967aa;
-	/*--secondary-b-dark: #412669;*/
+	--secondary-b-dark: #412669;
 
 
 
@@ -195,6 +195,7 @@ MAIN
 Banner photo
 *****************/
 .banner-container {
+	background-color: black;
 	width: 100%;
 	position: relative;
 }
@@ -288,6 +289,7 @@ STUDENT PROJECTS
 	.project-grid > figure {
 		padding: 1em 2em;
 	}
+
 	.project-image img {
 		width: 100%;
 	}
@@ -370,8 +372,8 @@ MEDIA QUERY 1
 *****************/
 @media screen and (min-width: 560px) {
 	/*Banner + text overlay*/
-	.banner-imag {
-		 background-color: black;
+	.banner-image {
+		 opacity: .5;
 	}
 	.text-overlay {
 		display: block;
@@ -399,7 +401,7 @@ MEDIA QUERY 1
 	}
 
 	/*Year end show*/
-	.year-end-grid {
+	/*.year-end-grid {
 		padding: 1em 2em;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -407,7 +409,27 @@ MEDIA QUERY 1
 	}
 	.project-image {
 		padding: 0;
+	}*/
+
+
+	/*Student Projects - masonry-style columns*/
+	.project-grid, .year-end-grid {
+		display: block;
+		padding: 2em;
+		column-count: 2;
+		column-gap: 1em;
 	}
+	#student-projects .project-image, #year-end-show .project-image  {
+		padding: 0 0 1em 0;
+		-webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+	}
+
+
+
+/*Careers*/
+
 }/*last curly*/
 
 
