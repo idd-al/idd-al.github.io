@@ -112,31 +112,7 @@ GENERAL
 .link-no-underline a {
 	text-decoration: none;
 }
-/*.link-primary a:hover {
-	color: var(--primary);
-}
-.link-dark a:hover {
-	color: var(--secondary-dark);
-}
-.link-light a:hover {
-	color: var(--secondary-light);
-}
-.link-no-underline a:hover {
-	text-decoration: none;
-}*/
 
-/*.link-on-light a {
-	color: var(--on-light);
-	text-decoration: none;
-}
-.link-on-dark a {
-	color: var(--on-dark);
-	text-decoration: none;
-}
-.link-hover a:hover {
-	color: var(--secondary-a-light);
-	text-decoration: underline;
-}
 
 /******************************************
 HEADER
@@ -174,23 +150,11 @@ HEADER
 	position: absolute;
 	z-index: 9999;
 }
-input[type=checkbox] {
+input[type=checkbox], #toggle-close, input[type=checkbox] ~ ul,  input[type=checkbox]:checked ~ #toggle-open {
 	display: none;
 }
-#toggle-close {
-	display: none;
-}
-input[type=checkbox] ~ ul {
-	display: none;
-}
-input[type=checkbox]:checked ~ ul {
+input[type=checkbox]:checked ~ ul, input[type=checkbox]:checked ~ #toggle-close {
 	display: block;
-}
-input[type=checkbox]:checked ~ #toggle-close {
-	display: block;
-}
-input[type=checkbox]:checked ~ #toggle-open {
-	display: none;
 }
 
 /*Menu panel*/
@@ -212,6 +176,7 @@ input[type=checkbox]:checked ~ #toggle-open {
 .menu-items a {
 	color: var(--primary);
 	text-decoration: none; 
+	font-family: var(--heading);
 }
 
 
@@ -226,6 +191,9 @@ MAIN
 /****************
 Banner photo
 *****************/
+#banner {
+	position: relative;
+}
 .banner-container {
 	background-color: black;
 	width: 100%;
@@ -344,7 +312,7 @@ STUDENT PROJECTS
 /****************
 CAREERS/ALUMNI
 *****************/
-#careers ul {
+#career-blurb ul {
 	padding-top: .5em;
 	padding-left: 2em;
 }
@@ -419,7 +387,7 @@ BREAKPOINTS
 /****************
 MEDIA QUERY 1
 *****************/
-@media screen and (min-width: 560px) {
+@media screen and (min-width: 615px) {
 	/*Banner + text overlay*/
 	.banner-image {
 		 opacity: .5;
@@ -541,12 +509,85 @@ MEDIA QUERY 1
 }/*last curly*/
 
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 819px) {
+
+	main {
+		padding-top: 500px;
+	}
+
+
+	/*Topbar*/
+	.topbar-grid {
+		grid-template-columns: .5fr 3fr;
+		grid-template-areas:
+		"name menu";
+		grid-gap: 2em;
+	}
+	#website-name {
+		grid-area: name;
+		align-self: center;
+	}
+	#main-menu {
+		grid-area: menu;
+	}
+
+	
+	#main-menu label {
+		display: none;
+	}
+	#main-menu ul {
+		background-color: var(--primary);
+		display: grid;
+		grid-template-columns: auto auto auto auto auto;
+		grid-gap: 1em;
+	}
+	.menu-items {
+		width: auto;
+		height: auto;
+		position: relative;
+		z-index: 9997;
+		top: 0;
+		text-align: left;
+	}
+	.menu-items li {
+		display: inline-block;
+		padding: .5em;
+		text-align: center;
+		border-bottom: 2px solid var(--primary);
+	}
+	.menu-items a {
+		color: var(--on-dark);
+		font-size: .75em;
+	}
+
+	.menu-items li:hover {
+		border-bottom: 2px solid var(--secondary-light);
+	}
+
+	.banner-container {
+		position: fixed;
+		z-index: -1;
+		top: 0;
+		left: 0;
+	}
+	
+
+
+
+	/*Careers*/
+	#alumni-success {
+		display: grid; 
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 1em;
+	}
+	.alumni-grid {
+		padding: 0;
+	}
+
+
+
 
 	/*Footer*/
-	.container {
-		max-width: 800px;
-	}
 	#contact, #legal {
 		display: block;
 	}
@@ -575,5 +616,28 @@ MEDIA QUERY 1
 	#top-footer h4, #top-footer li {
 		text-align: left;
 	}
+
+}/*last curly*/
+
+
+
+
+
+
+
+
+@media screen and (min-width: 910px) {
+	
+	.topbar-grid {
+		grid-gap: 12em;
+	}
+	/*
+	.menu-items li {	
+		padding: 1em;
+		font-size: 1em;
+	}*/
+
+
+
 
 }/*last curly*/
