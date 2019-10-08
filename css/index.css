@@ -6,16 +6,16 @@ html {
 	COLOURS
 	*****************/
 	--background: #ffffff;
-	--primary: #0e1436;
-	--on-light: #101530;
+	--primary: #05323f;
+	--on-light: #05323f;
 	--on-dark: #ffffff;
 
-	--secondary-a: #1d98d1;
-	--secondary-a-light: #71aac8;
-	/*--secondary-a-dark: #194169;*/
-	--secondary-b: #6b2b84;
+	--secondary-light: #09a195;
+	/*--secondary-a-light: #71aac8;*/
+	--secondary-dark: #01505e;
+	/*--secondary-b: #6b2b84;
 	--secondary-b-light: #a967aa;
-	--secondary-b-dark: #412669;
+	--secondary-b-dark: #412669;*/
 
 
 
@@ -56,7 +56,7 @@ GENERAL
 	font-weight: 500;
 }
 .subheading {
-	background-color: var(--secondary-a);
+	background-color: var(--secondary-light);
 	color: var(--on-dark);
 }
 
@@ -87,13 +87,45 @@ GENERAL
 }
 
 .color-icon {
-	color: var(--primary);
+	color: var(--secondary-dark);
 }
 
 
 
 /*LINKS*/
 .link-on-light a {
+	color: var(--on-dark);
+	text-decoration: none;
+}
+.link-on-dark a {
+	color: var(--on-dark);
+	text-decoration: none;
+}
+.link-hover-light a:hover {
+	color: var(--secondary-light);
+	text-decoration: underline;
+}
+.link-hover-dark a:hover{
+	color: var(--secondary-dark);
+	text-decoration: underline;
+}
+.link-no-underline a {
+	text-decoration: none;
+}
+/*.link-primary a:hover {
+	color: var(--primary);
+}
+.link-dark a:hover {
+	color: var(--secondary-dark);
+}
+.link-light a:hover {
+	color: var(--secondary-light);
+}
+.link-no-underline a:hover {
+	text-decoration: none;
+}*/
+
+/*.link-on-light a {
 	color: var(--on-light);
 	text-decoration: none;
 }
@@ -302,7 +334,7 @@ STUDENT PROJECTS
 	}
 
 	.caption {
-		background-color: var(--secondary-a);
+		background-color: var(--secondary-light);
 		color: var(--on-dark);
 		font-family: var(--heading);
 		padding: .5em;
@@ -337,11 +369,22 @@ CAREERS/ALUMNI
 /******************************************
 FOOTER
 ******************************************/
-.bottombar {
-	background-color: var(--primary);
+#top-footer, #bottom-footer {
+	/*background-color: var(--primary);*/
 	color: var(--on-dark);
 	padding: 2em;
 }
+#top-footer {
+	background-color: var(--secondary-dark);
+}
+#top-footer section:last-child {
+	padding-bottom: 0;
+}
+#bottom-footer {
+	background-color: var(--secondary-light);
+	text-align: center;
+}
+
 .bottombar section {
 	padding-bottom: 1em;
 }
@@ -358,13 +401,10 @@ FOOTER
 	padding: .2em 0;
 }
 
-#contact {
+#contact, #legal {
 	display: none;
 }
 
-.social-media {
-	text-align: center; 
-}
 .social-media li {
 	display: inline-block;
 	padding: .5em;
@@ -427,8 +467,11 @@ MEDIA QUERY 1
 
 
 	/*Careers*/
-
+	#alumni-success {
+		padding: 2em;
+	}
 	.alumni-grid {
+		padding: 0 0 1em 0;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: auto 2fr;
@@ -466,18 +509,58 @@ MEDIA QUERY 1
 		grid-area: quo;
 	}*/
 
-	.bottombar {
+	#top-footer {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		grid-template-rows: auto auto auto;
+		/*display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto auto;
 		grid-template-areas: 
 		"jump imp"
-		"social social"
+		/*"social social"
 		"copy copy";		
-		grid-gap: 1em;
+		grid-gap: 1em;*/
 	}
 	.bottombar section {
 		padding: 0;
+	}
+	/*#jump-to {
+		grid-area: jump;
+	}
+	#important-links {
+		grid-area: imp;
+	}*/
+	/*#social-media {
+		grid-area: social;
+	}
+	#copyright {
+		grid-area: copy;
+		text-align: center;
+	}*/
+
+}/*last curly*/
+
+
+@media screen and (min-width: 800px) {
+
+	/*Footer*/
+	.container {
+		max-width: 800px;
+	}
+	#contact, #legal {
+		display: block;
+	}
+	#contact img {
+		width: 50%;
+	}
+
+	#top-footer {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-areas: 
+		"con jump imp legal";
+	}
+	#contact {
+		grid-area: con;
 	}
 	#jump-to {
 		grid-area: jump;
@@ -485,19 +568,12 @@ MEDIA QUERY 1
 	#important-links {
 		grid-area: imp;
 	}
-	#social-media {
-		grid-area: social;
-	}
-	#copyright {
-		grid-area: copy;
-		text-align: center;
+	#legal {
+		grid-area: legal;
 	}
 
-}/*last curly*/
-
-
-@media screen and (min-width: 650px) {
-
-
+	#top-footer h4, #top-footer li {
+		text-align: left;
+	}
 
 }/*last curly*/
