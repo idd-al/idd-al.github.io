@@ -177,6 +177,7 @@ input[type=checkbox]:checked ~ ul, input[type=checkbox]:checked ~ #toggle-close 
 	color: var(--primary);
 	text-decoration: none; 
 	font-family: var(--heading);
+	display: block;
 }
 
 
@@ -225,9 +226,8 @@ OVERVIEW, SKILLS
 		grid-gap: 1em;
 		justify-content: center;
 	}
-	/*.program-grid { 
-		grid-auto-rows: 5em;
-	}*/
+
+	
 	.icon-label, .program-img li {
 		list-style: none;
 		text-align: center;
@@ -235,7 +235,7 @@ OVERVIEW, SKILLS
 		margin: 0 auto;
 	}
 	.program-img li {
-		align-self: center; 
+		align-self: center;
 	}
 
 	.icon-label i {
@@ -302,7 +302,7 @@ STUDENT PROJECTS
 	}
 
 	.caption {
-		background-color: var(--secondary-light);
+		background-color: var(--secondary-dark);
 		color: var(--on-dark);
 		font-family: var(--heading);
 		padding: .5em;
@@ -384,10 +384,10 @@ FOOTER
 BREAKPOINTS
 ******************************************/
 
-/****************
-MEDIA QUERY 1
-*****************/
-@media screen and (min-width: 615px) {
+/******************
+MEDIA QUERY 1 640PX
+*******************/
+@media screen and (min-width: 640px) {
 	/*Banner + text overlay*/
 	.banner-image {
 		 opacity: .5;
@@ -399,6 +399,9 @@ MEDIA QUERY 1
 	/*Icon grid, program grid*/
 	.icon-grid, .program-grid {
 		grid-template-columns: 7em 7em 7em 7em;
+	}
+	.icon-grid {
+		grid-gap: 2em;
 	}
 
 
@@ -456,6 +459,9 @@ MEDIA QUERY 1
 	.alumni-grid p {
 		grid-area: quo;
 	}
+
+	
+
 	/*#alumni-success  {
 		display: grid;
 		grid-template-columns: auto auto;
@@ -512,10 +518,10 @@ MEDIA QUERY 1
 
 
 
-/****************
-MEDIA QUERY 2
-*****************/
-@media screen and (min-width: 819px) {
+/*******************
+MEDIA QUERY 2  768PX
+********************/
+@media screen and (min-width: 768px) {
 
 	/*main {
 		padding-top: 500px;
@@ -594,15 +600,48 @@ MEDIA QUERY 2
 
 
 
+	/*Overview*/
+		#overview {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-areas:
+			"over over"
+			"exp cre";
+		}
+
+		#overview-blurb {
+			grid-area: over;
+		}
+		#we-explore {
+			grid-area: exp;
+		}
+		#we-create {
+			grid-area: cre;
+		}
+		#we-explore h3, #we-create h3 {
+			text-align: center; 
+		}
+		#we-explore .icon-grid, #we-create .icon-grid {
+			grid-template-columns: 7em 7em;
+		}
+
+
+		.icon-grid {
+			grid-template-columns: 7em 7em 7em 7em;
+		}
+
+
+
+
 	/*Careers*/
-	#alumni-success {
+	/* #alumni-success {
 		display: grid; 
 		grid-template-columns: 1fr 1fr;
 		grid-gap: 1em;
 	}
 	.alumni-grid {
 		padding: 0;
-	}
+	} */
 
 
 
@@ -683,13 +722,11 @@ MEDIA QUERY 3
 	#we-explore, #we-create {
 		background-color: var(--secondary-dark);
 	}
-	#we-explore h3, #we-create h3 {
-		text-align: center; 
-	}
+
 
 	.icon-grid {
 		grid-template-columns: 7em 7em;
-		grid-auto-rows: 7em;
+		/* grid-auto-rows: 7em; */
 		padding: 2em;
 	}
 	.icon-grid li {
@@ -720,18 +757,20 @@ MEDIA QUERY 3
 	}
 	#skills .icon-grid {
 		margin: 0;
+		grid-template-columns: 7em 7em;
 	}
 
 	.program-grid {
-		padding: 3em;
+		padding: 5em;
 		align-self: center; 
 		grid-gap: 2em;
-
+		/* border: 4px solid var(--secondary-light); */
 	}
 	.program-grid li {
-		background-color: var(--secondary-light);
+		/* background-color: var(--secondary-light); */
 		padding: 1em;
 		border-radius: 60px;		
+		border: 3px solid var(--secondary-light);
 	}
 
 
@@ -752,6 +791,26 @@ MEDIA QUERY 3
 		column-count: 3;
 	}
 
+
+
+		/*Careers*/
+	#alumni-success {
+		display: grid; 
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 1em;
+	}
+	#alumni-success p {
+		font-size: .9em;
+	}
+	.alumni-grid {
+		padding: 0;
+	}
+	.alumni-grid img {
+		object-fit: contain;
+	}
+	.cover {
+		object-fit: cover;
+	}
 
 
 }/*last curly*/
