@@ -517,9 +517,9 @@ MEDIA QUERY 2
 *****************/
 @media screen and (min-width: 819px) {
 
-	main {
+	/*main {
 		padding-top: 500px;
-	}
+	}*/
 
 
 	/*Topbar*/
@@ -570,7 +570,7 @@ MEDIA QUERY 2
 		border-bottom: 2px solid var(--secondary-light);
 	}
 
-	.banner-container {
+	/*.banner-container {
 		width: 100%;
 		height: 100%;
 		position: fixed;
@@ -582,10 +582,13 @@ MEDIA QUERY 2
 		-o-background-size: cover;
 		background-size: cover;
 	}
+	.banner-image {
+		object-fit: cover;
+	}*/
 	
 	
 	.icon-grid li {
-		color: var(--background);
+		color: var(--primary);
 	}
 
 
@@ -661,7 +664,7 @@ MEDIA QUERY 3
 
 	/*Overview*/
 	#overview {
-		margin: 8em 4em;
+		/*margin: 8em 4em;*/
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-areas:
@@ -697,9 +700,10 @@ MEDIA QUERY 3
 
 	/*Skills*/
 	#skills {
-		margin: 8em 4em;
+		/*margin: 8em 4em;*/
+		margin: 6em 0;
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1fr 3fr;
 		grid-template-areas:
 		"pro blurb"
 		"pro gen";
@@ -726,7 +730,7 @@ MEDIA QUERY 3
 	}
 	.program-grid li {
 		background-color: var(--secondary-light);
-		padding: 2em;
+		padding: 1em;
 		border-radius: 60px;		
 	}
 
@@ -737,7 +741,7 @@ MEDIA QUERY 3
 	/*Current students*/
 
 	#current-students {
-		margin: 8em 4em;
+		/*margin: 8em 4em;*/
 	}
 
 
@@ -751,3 +755,8 @@ MEDIA QUERY 3
 
 
 }/*last curly*/
+
+
+
+
+
