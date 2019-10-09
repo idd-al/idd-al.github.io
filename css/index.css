@@ -10,9 +10,9 @@ html {
 	--on-light: #05323f;
 	--on-dark: #ffffff;
 
-	--secondary-light: #09a195;
+	--secondary-light: #0997a1;
 	/*--secondary-a-light: #71aac8;*/
-	--secondary-dark: #01505e;
+	--secondary-dark: #085c6b;
 	/*--secondary-b: #6b2b84;
 	--secondary-b-light: #a967aa;
 	--secondary-b-dark: #412669;*/
@@ -225,9 +225,9 @@ OVERVIEW, SKILLS
 		grid-gap: 1em;
 		justify-content: center;
 	}
-	.program-grid { 
+	/*.program-grid { 
 		grid-auto-rows: 5em;
-	}
+	}*/
 	.icon-label, .program-img li {
 		list-style: none;
 		text-align: center;
@@ -509,6 +509,12 @@ MEDIA QUERY 1
 }/*last curly*/
 
 
+
+
+
+/****************
+MEDIA QUERY 2
+*****************/
 @media screen and (min-width: 819px) {
 
 	main {
@@ -565,12 +571,23 @@ MEDIA QUERY 1
 	}
 
 	.banner-container {
+		width: 100%;
+		height: 100%;
 		position: fixed;
 		z-index: -1;
 		top: 0;
 		left: 0;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
 	}
 	
+	
+	.icon-grid li {
+		color: var(--background);
+	}
+
 
 
 
@@ -625,8 +642,10 @@ MEDIA QUERY 1
 
 
 
-
-@media screen and (min-width: 910px) {
+/****************
+MEDIA QUERY 3
+*****************/
+@media screen and (min-width: 1024px) {
 	
 	.topbar-grid {
 		grid-gap: 12em;
@@ -637,6 +656,97 @@ MEDIA QUERY 1
 		font-size: 1em;
 	}*/
 
+
+	/*MAIN*/
+
+	/*Overview*/
+	#overview {
+		margin: 8em 4em;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-areas:
+		"over exp cre";
+	}
+	#we-explore {
+		grid-area: exp;
+		border-right: solid 4px var(--secondary-light);
+	}
+	#overview-blurb {
+		grid-area: over;
+	}
+	#we-create {
+		grid-area: cre;
+	}
+	#we-explore, #we-create {
+		background-color: var(--secondary-dark);
+	}
+	#we-explore h3, #we-create h3 {
+		text-align: center; 
+	}
+
+	.icon-grid {
+		grid-template-columns: 7em 7em;
+		grid-auto-rows: 7em;
+		padding: 2em;
+	}
+	.icon-grid li {
+		color: var(--background);
+	}
+
+
+
+	/*Skills*/
+	#skills {
+		margin: 8em 4em;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas:
+		"pro blurb"
+		"pro gen";
+	}
+	#skills-blurb {
+		grid-area: blurb;
+	}
+	#programs {
+		grid-area: pro;
+	}
+	#general-skills {
+		grid-area: gen;
+		background-color: var(--secondary-dark);
+	}
+	#skills .icon-grid {
+		margin: 0;
+	}
+
+	.program-grid {
+		padding: 3em;
+		align-self: center; 
+		grid-gap: 2em;
+
+	}
+	.program-grid li {
+		background-color: var(--secondary-light);
+		padding: 2em;
+		border-radius: 60px;		
+	}
+
+
+	
+
+
+	/*Current students*/
+
+	#current-students {
+		margin: 8em 4em;
+	}
+
+
+
+
+
+	.project-grid, .year-end-grid {
+		column-count: 3;
+	}
 
 
 

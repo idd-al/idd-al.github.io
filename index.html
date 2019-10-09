@@ -63,8 +63,9 @@
 
 		<!--Banner-->
 		<div id="banner">
-			<div class="banner-container"><img class="banner-image" src="img/sticky-note-bg.jpg" alt="sticky note brainstorming session">
-			<!--Photo by Patrick Perkins on Unsplash-->
+			<div class="banner-container"><img class="banner-image" src="img/sticky-note-bg.jpg"
+					alt="sticky note brainstorming session">
+				<!--Photo by Patrick Perkins on Unsplash-->
 			</div>
 			<ul class="text-overlay">
 				<li>
@@ -81,8 +82,9 @@
 		Photo by You X Ventures on Unsplash-->
 
 		<!--Program overview-->
-		<section>
-			<article class="section-blurb centered-text color-block-primary">
+		<section id="overview">
+			<article id="overview-blurb" class="section-blurb color-block-primary">
+				<!--centered-text-->
 				<h2>Overview</h2>
 				<!--Blurb; taken from GBC website and modified-->
 				<p class="">Interaction Design is an interdisciplinary field merging design
@@ -94,7 +96,7 @@
 
 
 			<!--We explore-->
-			<section>
+			<section id="we-explore">
 				<h3 class="subheading">We explore</h3>
 				<ul class="icon-grid icon-label color-icon">
 					<!--Mixed realities-->
@@ -127,7 +129,7 @@
 			</section>
 
 			<!--We create-->
-			<section>
+			<section id="we-create">
 				<h3 class="subheading">We create</h3>
 				<ul class="icon-grid icon-label color-icon">
 					<!--Social media-->
@@ -156,52 +158,54 @@
 		</section>
 
 		<!--Skills-->
-		<section>
-			<article class="section-blurb centered-text color-block-primary">
+		<section id="skills">
+			<article id="skills-blurb" class="section-blurb centered-text color-block-primary">
 				<h2>Skills</h2>
 				<p>The IDD program gives students the chance to develop
 					the skills they'll use in the real world. Students will leave the program with knowledge of a variety of
 					design
 					programs and coding languages.</p>
 			</article>
-			<h3 class="subheading">We offer experience in</h3>
 
 
 			<!--Skills-->
-			<ul id="skills" class="icon-grid icon-label color-icon">
-				<!--Usability testing-->
-				<li>
-					<i class="fas fa-tasks"></i>
-					<label>Usability testing</label>
-				</li>
-				<!--Research-->
-				<li>
-					<i class="fas fa-search"></i>
-					<label>Research</label>
-				</li>
-				<!--Collaboration-->
-				<li>
-					<i class="fas fa-users"></i>
-					<label>Collaboration</label>
-				</li>
-				<!--Real world projects-->
-				<li>
-					<i class="fas fa-globe-americas"></i>
-					<label>Real world projects</label>
-				</li>
-			</ul>
+			<section id="general-skills">
+				<h3 class="subheading">We offer experience in</h3>
+				<ul id="skills" class="icon-grid icon-label color-icon">
+					<!--Usability testing-->
+					<li>
+						<i class="fas fa-tasks"></i>
+						<label>Usability testing</label>
+					</li>
+					<!--Research-->
+					<li>
+						<i class="fas fa-search"></i>
+						<label>Research</label>
+					</li>
+					<!--Collaboration-->
+					<li>
+						<i class="fas fa-users"></i>
+						<label>Collaboration</label>
+					</li>
+					<!--Real world projects-->
+					<li>
+						<i class="fas fa-globe-americas"></i>
+						<label>Real world projects</label>
+					</li>
+				</ul>
+			</section>
 
-			<!--<hr>-->
+			<!--<hr> line break?-->
 
 			<!--Programs; icons from icons8-->
-			<ul class="program-grid program-img">
+			<ul id="programs" class="program-grid program-img">
 				<li><img src="https://img.icons8.com/color/48/000000/adobe-photoshop.png" alt="Adobe Photoshop"></li>
 				<li><img src="https://img.icons8.com/color/48/000000/adobe-illustrator.png" alt="Adobe Illustrator"></li>
 				<li><img src="https://img.icons8.com/color/48/000000/adobe-indesign.png" alt="Adobe Indesign"></li>
 				<li><img src="https://img.icons8.com/color/48/000000/adobe-after-effects.png" alt="Adobe After Effects"></li>
-				<li><img src="https://img.icons8.com/color/48/000000/autodesk-maya.png" alt="Maya"></li>
+				<li><img src="https://img.icons8.com/material/48/000000/autodesk-maya.png" alt="Maya"></li>
 				<li><img src="img/zbrush_icon-icons.com.ico" alt="ZBrush"></li>
-				<li><img src="https://img.icons8.com/color/48/000000/visual-studio.png" alt="Visual Studio"></li>
+				<li><img src="https://img.icons8.com/ios-filled/50/000000/visual-studio-logo.png" alt="Visual Studio"></li>
 				<li><img src="https://img.icons8.com/material/48/000000/github.png" alt="GitHub"></li>
 				<li><img src="https://img.icons8.com/color/48/000000/html-5.png" alt="html"></li>
 				<li><img src="https://img.icons8.com/color/48/000000/css3.png" alt="css"></li>
@@ -211,11 +215,10 @@
 		</section>
 
 		<!--Current Students-->
-		<section>
-			<article class="section-blurb centered-text color-block-primary">
-				<h2>Showcase</h2>
-				<p>The IDD program is home to future designers. See some sample work and what students have to say about the
-					program below.</p>
+		<section id="current-students">
+			<article id="current-students-blurb" class="section-blurb centered-text color-block-primary">
+				<h2>Current students</h2>
+				<p>The IDD program is home to future designers. See some sample work and what students have to say about the program below.</p>
 			</article>
 
 			<!--Designers of the future-->
@@ -399,7 +402,8 @@
 							<h4>Pidge Gunderson</h4>
 							<h4>Mobile designer, TD Mobile</h4>
 						</div>
-						<p class="centered-text">I've always wanted to design apps, especially for mobile devices. IDD helped me learn how to design solutions that look good and work well.</p>
+						<p class="centered-text">I've always wanted to design apps, especially for mobile devices. IDD helped me
+							learn how to design solutions that look good and work well.</p>
 					</blockquote>
 
 					<!--Alum Lance-->
@@ -410,7 +414,8 @@
 							<h4>Lance McClain</h4>
 							<h4>SEO specialist, Nexus Systems Group</h4>
 						</div>
-						<p class="centered-text">What I've learned about UX in the IDD program has really helped me excel in my work in search engine optimization, which depends on how users interact with applications.</p>
+						<p class="centered-text">What I've learned about UX in the IDD program has really helped me excel in my work
+							in search engine optimization, which depends on how users interact with applications.</p>
 					</blockquote>
 
 					<!--Alum Keith-->
@@ -421,7 +426,8 @@
 							<h4>Keith G.</h4>
 							<h4>Web developer, IBM</h4>
 						</div>
-						<p class="centered-text">IDD gives you the chance to learn and practice a variety of coding languages, so now I get to use my skills to create products that provide users with a great experience.</p>
+						<p class="centered-text">IDD gives you the chance to learn and practice a variety of coding languages, so
+							now I get to use my skills to create products that provide users with a great experience.</p>
 					</blockquote>
 				</section>
 
@@ -434,59 +440,60 @@
 
 	<footer class="bottombar">
 		<section id="top-footer" class="link-on-light link-hover-light">
-		<!--Jump to-->
-		<section id="jump-to">
-			<h4>Jump to</h4>
-			<ul>
-				<li><a href="#">Overview</a></li>
-				<li><a href="#">Skills</a></li>
-				<li><a href="#">Showcase</a></li>
-				<li><a href="#">Careers</a></li>
-				<!--<li><a href="#">Related programs</a></li>-->
-			</ul>
-		</section>
+			<!--Jump to-->
+			<section id="jump-to">
+				<h4>Jump to</h4>
+				<ul>
+					<li><a href="#">Overview</a></li>
+					<li><a href="#">Skills</a></li>
+					<li><a href="#">Current students</a></li>
+					<li><a href="#">Careers</a></li>
+					<!--<li><a href="#">Related programs</a></li>-->
+				</ul>
+			</section>
 
-		<!--Important links-->
-		<section id="important-links">
-			<h4>Important Links</h4>
-			<ul>
-				<li><a href="https://www.georgebrown.ca">GBC homepage</a></li>
-				<li><a href="https://www.georgebrown.ca/programs/interaction-design-program-g113/">IDD homepage</a></li>
-				<li><a href="http://yearendshow.schoolofdesign.ca/category/interaction-design-and-development/">GBC Year End
-						Show</a></li>
-				<li><a href="https://www.ontariocolleges.ca/en">Ontario Colleges</a></li>
-			</ul>
-		</section>
+			<!--Important links-->
+			<section id="important-links">
+				<h4>Important Links</h4>
+				<ul>
+					<li><a href="https://www.georgebrown.ca">GBC homepage</a></li>
+					<li><a href="https://www.georgebrown.ca/programs/interaction-design-program-g113/">IDD homepage</a></li>
+					<li><a href="http://yearendshow.schoolofdesign.ca/category/interaction-design-and-development/">GBC Year End
+							Show</a></li>
+					<li><a href="https://www.ontariocolleges.ca/en">Ontario Colleges</a></li>
+				</ul>
+			</section>
 
 
-		<!--Legal-->
-		<section id="legal">
+			<!--Legal-->
+			<section id="legal">
 				<h4>Legal</h4>
 				<ul>
 					<li><a href="#">Accessibility</a></li>
 					<li><a href="#">Terms of service</a></li>
 					<li><a href="#">Privacy policy</a></li>
-					<li><a href="http://yearendshow.schoolofdesign.ca/category/interaction-design-and-development/">Site map</a></li>
-					
+					<li><a href="http://yearendshow.schoolofdesign.ca/category/interaction-design-and-development/">Site map</a>
+					</li>
+
 				</ul>
 			</section>
 
-		<!--Contact-->
-		<section id="contact">
-			<h4>Contact</h4>
-			<ul>
-				<li><img src="img/gbc-logo.png" alt="George Brown College Logo"></li>
-				<li>School of Design</li>
-				<li>3 Lower Jarvis St.</li>
-				<li>Toronto, ON</li>
-				<li>M5E 3Y5</li>
-			</ul>
-			<ul>
-				<li><a href="#">(416) 415-2000</a></li>
-				<li><a href="#">ask.george@georgebrown.ca</a></li>
-			</ul>
+			<!--Contact-->
+			<section id="contact">
+				<h4>Contact</h4>
+				<ul>
+					<li><img src="img/gbc-logo.png" alt="George Brown College Logo"></li>
+					<li>School of Design</li>
+					<li>3 Lower Jarvis St.</li>
+					<li>Toronto, ON</li>
+					<li>M5E 3Y5</li>
+				</ul>
+				<ul>
+					<li><a href="#">(416) 415-2000</a></li>
+					<li><a href="#">ask.george@georgebrown.ca</a></li>
+				</ul>
+			</section>
 		</section>
-	</section>
 
 		<section id="bottom-footer" class="link-on-dark link-hover-dark">
 			<!--Social media-->
@@ -503,7 +510,7 @@
 			<div id="copyright">
 				<p>&copy; Ashley Lall 2019</p>
 			</div>
-	</section>
+		</section>
 	</footer>
 
 
