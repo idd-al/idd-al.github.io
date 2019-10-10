@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500,600,700,800&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Hind&display=swap');
 
 html {
 	/****************
@@ -24,7 +24,7 @@ html {
 	*****************/
 
 	--heading: 'Montserrat', sans-serif;
-	--body: 'Roboto', sans-serif;
+	--body: 'Hind', sans-serif;
 
 }
 
@@ -32,6 +32,18 @@ html {
 /****************
 GENERAL
 *****************/
+body {
+	background-image: url(https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: var(--secondary-dark);
+	min-height: 100%;
+	height: 100%;
+}
+
+
 
 /*HEADINGS*/
 .heading h1, h2, h3, h4 {
@@ -194,13 +206,38 @@ Banner photo
 *****************/
 #banner {
 	position: relative;
+	background-color: var(--secondary-dark);
+}
+.banner-image {
+	padding-top: 77.6px;
+	opacity: .7;
+}
+.text-overlay {
+	color: var(--on-dark);
+	font-size: .65em;
+	padding: 2em;
+	list-style: none;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	
+}
+
+
+
+
+/* #banner {
+	position: relative;
 }
 .banner-container {
-	background-color: black;
+	background-color: var(--primary);
 	width: 100%;
 	position: relative;
 }
-.text-overlay {
+.banner-image {
+	opacity: .6;
+} */
+/* .text-overlay {
 	display: none;
 	padding: 2em;
 	list-style: none;
@@ -212,7 +249,7 @@ Banner photo
 	padding: .25em;
 	color: var(--on-dark);
 	text-align: left;
-}
+} */
 
 
 /****************
@@ -223,7 +260,7 @@ OVERVIEW, SKILLS
 		display: grid;
 		grid-template-columns: 7em 7em;
 		grid-auto-rows: 7em;
-		grid-gap: 1em;
+		grid-gap: 2em;
 		justify-content: center;
 	}
 
@@ -356,7 +393,7 @@ FOOTER
 .bottombar section {
 	padding-bottom: 1em;
 }
-.bottombar h4 {
+.bottombar h3 {
 	text-align: center;
 	padding-bottom: .5em;
 }
@@ -389,12 +426,9 @@ MEDIA QUERY 1 640PX
 *******************/
 @media screen and (min-width: 640px) {
 	/*Banner + text overlay*/
-	.banner-image {
-		 opacity: .5;
-	}
-	.text-overlay {
+	/* .text-overlay {
 		display: block;
-	}
+	} */
 
 	/*Icon grid, program grid*/
 	.icon-grid, .program-grid {
@@ -527,6 +561,11 @@ MEDIA QUERY 2  768PX
 		padding-top: 500px;
 	}*/
 
+	
+	/* .text-overlay {
+		top: 400px; 
+		justify-self: center;
+	} */
 
 	/*Topbar*/
 	.topbar-grid {
@@ -576,6 +615,14 @@ MEDIA QUERY 2  768PX
 		border-bottom: 2px solid var(--secondary-light);
 	}
 
+	/* .banner-container {
+		position: fixed;
+		z-index: -1;
+		height: 100vh;
+		width: 100%;
+		background-size: cover;
+	} */
+	
 	/*.banner-container {
 		width: 100%;
 		height: 100%;
@@ -606,25 +653,50 @@ MEDIA QUERY 2  768PX
 			grid-template-columns: 1fr 1fr;
 			grid-template-areas:
 			"over over"
-			"exp cre";
+			"exp exp"
+			"cre cre";
 		}
 
 		#overview-blurb {
 			grid-area: over;
 		}
 		#we-explore {
+			position: relative;
 			grid-area: exp;
+			display: grid; 
+			grid-template-columns: 1fr 1fr;
 		}
 		#we-create {
 			grid-area: cre;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-areas: 
+			"ico head";
 		}
-		#we-explore h3, #we-create h3 {
+		#we-create h3 {
+			grid-area: head;
+			background-color: var(--secondary-light);
+		}
+		#we-create ul {
+			grid-area: ico;
+		}
+
+		#we-explore div h3, #we-create h3 {
 			text-align: center; 
+			align-self: center; 
+			background-color: var(--secondary-light);
+			top: 50%;
 		}
 		#we-explore .icon-grid, #we-create .icon-grid {
 			grid-template-columns: 7em 7em;
 		}
+		#we-explore div {
+			background-color: var(--secondary-light);
+			text-align: center; 
+		}
 
+		
+		
 
 		.icon-grid {
 			grid-template-columns: 7em 7em 7em 7em;
@@ -672,8 +744,11 @@ MEDIA QUERY 2  768PX
 		grid-area: legal;
 	}
 
-	#top-footer h4, #top-footer li {
+	#top-footer h3, #top-footer li {
 		text-align: left;
+	}
+	#top-footer h3 {
+		padding: 0 0 1em 0;
 	}
 
 }/*last curly*/
@@ -808,10 +883,7 @@ MEDIA QUERY 3
 	.alumni-grid img {
 		object-fit: contain;
 	}
-	.cover {
-		object-fit: cover;
-	}
-
+	
 
 }/*last curly*/
 
