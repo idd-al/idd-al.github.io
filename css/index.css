@@ -33,12 +33,12 @@ html {
 GENERAL
 *****************/
 body {
-	background-image: url(https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+	background: var(--secondary-dark) url(/img/wireframe-main.jpg);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-	background-color: var(--secondary-dark);
+	/* background-color: var(--secondary-dark); */
 	min-height: 100%;
 	height: 100%;
 }
@@ -660,47 +660,88 @@ MEDIA QUERY 2  768PX
 		#overview-blurb {
 			grid-area: over;
 		}
-		#we-explore {
-			position: relative;
-			grid-area: exp;
-			display: grid; 
+		#we-explore, #we-create {
+			display: grid;
 			grid-template-columns: 1fr 1fr;
+		}
+		#we-explore {
+			grid-area: exp;	
+		}
+		#we-explore div {
+			/* background-color: black; */
+			/* background: url(/img/ideation-sticky-note.jpg); */
+			background-size: cover;
+			/* opacity: .7; */
 		}
 		#we-create {
 			grid-area: cre;
-			display: grid;
-			grid-template-columns: 1fr 1fr;
 			grid-template-areas: 
 			"ico head";
 		}
 		#we-create h3 {
 			grid-area: head;
-			background-color: var(--secondary-light);
+			/* background-color: var(--secondary-light); */
 		}
 		#we-create ul {
 			grid-area: ico;
 		}
 
-		#we-explore div h3, #we-create h3 {
-			text-align: center; 
-			align-self: center; 
-			background-color: var(--secondary-light);
-			top: 50%;
+		
+		#we-explore div, #we-create div {
+			/* background-color: var(--secondary-light); */
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-size: cover;
 		}
 		#we-explore .icon-grid, #we-create .icon-grid {
 			grid-template-columns: 7em 7em;
 		}
-		#we-explore div {
+
+		/*Color overlays*/
+		.color-overlay1 {
+			background: 
+				linear-gradient(
+					rgba(4, 59, 64, 0.5), 
+					rgba(4, 59, 64, 0.5)
+				),
+				url(/img/ideation-sticky-note.jpg);
+				/*Photo by You X Ventures on Unsplash*/
+		}
+		
+		.color-overlay2 {
+			background: 
+				linear-gradient(
+					rgba(4, 59, 64, 0.5), 
+					rgba(4, 59, 64, 0.5)
+				),
+				url(/img/whiteboard.jpg);
+				/*Photo by Kaleidico on Unsplash*/
+		}
+
+
+		
+
+
+
+		/* #we-explore div h3, #we-create h3 {
+			text-align: center; 
+			align-self: center; 
+			background-color: var(--secondary-light);
+			top: 50%; */
+		}
+	
+		/* #we-explore div {
 			background-color: var(--secondary-light);
 			text-align: center; 
-		}
+		} */
 
 		
 		
 
-		.icon-grid {
+		/* .icon-grid {
 			grid-template-columns: 7em 7em 7em 7em;
-		}
+		} */
 
 
 
