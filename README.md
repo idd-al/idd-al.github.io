@@ -108,6 +108,7 @@
 - https://www.pinterest.ca/pin/212654413634609015/
 - https://www.pinterest.ca/pin/212654413634609003/
 - https://studyabroad.arcadia.edu
+- http://sailingcollective.com/
 
 #### Footer
 - https://www.pinterest.ca/pin/773985885939314559/
