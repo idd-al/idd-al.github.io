@@ -384,7 +384,7 @@ OVERVIEW, SKILLS
 	STUDENT PROFILE
 *****************/
 	.student-profile {
-		padding: 1em 2em;
+		padding: 2em;
 		display: grid;
 		grid-template-columns: 5.5em auto;
 		grid-template-areas: 
@@ -557,15 +557,20 @@ MEDIA QUERY 1 640PX
 
 
 	/*Designers of the future grid*/
-	.student-grid {
+	/* #designers-of-the-future  {
 		padding: 2em;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
+		grid-template
 		grid-gap: 1em;
-	}
+	} */
 	.student-profile {
-		 padding: 0;
+		 /* padding: 2em 10em; */
 		 grid-template-rows: 6em; 
+		 grid-template-columns: .5fr 1fr;
+		 grid-template-areas: 
+		 "img name"
+		 "img quo";
 	}
 	.student-photo {
 		align-self: center; 
@@ -605,11 +610,11 @@ MEDIA QUERY 1 640PX
 	} */
 
 	/*Careers*/
-	#alumni-success {
+	/* #alumni-success {
 		padding: 2em;
-	}
+	} */
 	.alumni-grid {
-		padding: 0 0 1em 0;
+		padding: 2em;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: auto 2fr;
@@ -828,11 +833,21 @@ MEDIA QUERY 2  768PX
 			grid-area: ico;
 		}
 
-		#we-explore h3, #we-create h3, #general-skills h3, #programs h3 {
+		#we-explore h3, 
+		#we-create h3, 
+		#general-skills h3, 
+		#programs h3, 
+		#designers-of-the-future h3,
+		#alumni h3 {
 			font-size: 2em;
 			padding: 1em;
 		}
-		#we-explore div, #we-create div, #general-skills div, #programs div{
+		#we-explore div, 
+		#we-create div, 
+		#general-skills div, 
+		#programs div, 
+		#designers-of-the-future .subheading,
+		#alumni .subheading {
 			/* background-color: var(--secondary-light); */
 			padding: 0;
 			display: flex;
@@ -897,6 +912,26 @@ MEDIA QUERY 2  768PX
 
 
 
+	#designers-of-the-future {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}	
+	.student-profile {
+		grid-template-columns: 5.5em auto;
+		grid-template-areas: 
+		"img name"
+		"quo quo";
+	}
+
+
+	
+
+
+
+
+
+
+
 
 	/*Careers*/
 	/* #alumni-success {
@@ -907,22 +942,47 @@ MEDIA QUERY 2  768PX
 	.alumni-grid {
 		padding: 0;
 	} */
+	#alumni-success {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	.alumni-grid {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr auto auto;
+		grid-template-areas:
+		"img"
+		"name"
+		"quo";
+	}
+	.alumni-photo {
+		grid-area: img;
+	}
+	.alumni-name {
+		grid-area: name;
+	}
+	.alumni-grid p {
+		grid-area: quo;
+	}
+
 
 
 
 
 	/*Footer*/
-	/* #contact, #legal {
+	#contact, #legal {
 		display: block;
-	} */
-	/* #contact img {
+	}
+	#contact img {
 		width: 50%;
 	}
 
 	#top-footer {
-		grid-template-columns: 1fr 1fr 1fr 1fr;
+		/* grid-template-columns: 1fr 1fr 1fr 1fr; */
 		grid-template-areas: 
 		"con jump imp legal";
+	}
+	#top-footer section {
+		padding: 0;
 	}
 	#contact {
 		grid-area: con;
@@ -937,7 +997,7 @@ MEDIA QUERY 2  768PX
 		grid-area: legal;
 	}
 
-	#top-footer h3, #top-footer li {
+	/*#top-footer h3, #top-footer li {
 		text-align: left;
 	}
 	#top-footer h3 {
