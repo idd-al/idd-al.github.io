@@ -214,6 +214,9 @@ Banner photo
 .banner-image {
 	padding-top: 77.6px;
 	opacity: .7;
+	height: 100vh;
+	width: 100vw;
+	object-fit: cover; 
 }
 .text-overlay {
 	color: var(--on-dark);
@@ -716,7 +719,7 @@ MEDIA QUERY 2  768PX
 
 	/*Topbar*/
 	.topbar-grid {
-		grid-template-columns: .5fr 3fr;
+		grid-template-columns: auto auto;
 		grid-template-areas:
 		"name menu";
 		grid-gap: 2em;
@@ -795,11 +798,10 @@ MEDIA QUERY 2  768PX
 
 
 	/*Overview*/
-		#overview {
+		#overview-blocks {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			grid-template-areas:
-			"over over"
 			"exp exp"
 			"cre cre";
 		}
@@ -1016,10 +1018,28 @@ MEDIA QUERY 2  768PX
 MEDIA QUERY 3
 *****************/
 @media screen and (min-width: 1024px) {
-	
-	.topbar-grid {
-		grid-gap: 12em;
+	.container {
+		max-width: 950px;
+		margin: 0 auto;
 	}
+	/* .text-container {
+		max-width: 1000px;
+		margin: 0 auto;
+	} */
+	
+	
+	/* body {
+		max-width: 800px;
+		justify-content: center; 
+	} */
+
+	.topbar {
+		font-size: 1.2em;
+	}
+	.topbar-grid {
+		grid-gap: 15em;
+	}
+	
 	/*
 	.menu-items li {	
 		padding: 1em;
@@ -1029,43 +1049,55 @@ MEDIA QUERY 3
 
 	/*MAIN*/
 
+	#banner .text-overlay h2 {
+		font-size: 3.5em;
+	}
+
+
+
 	/*Overview*/
-	#overview {
-		/*margin: 8em 4em;*/
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
+	
+	.section-blurb {
+		padding: 4em 15em;
+		width: 100%;
+		text-align: center; 
+	}
+
+	#overview-blocks {
+		grid-template-columns: auto auto;
 		grid-template-areas:
-		"over exp cre";
+		"exp cre"; 
+		grid-gap: 2em;
 	}
-	#we-explore {
-		grid-area: exp;
-		border-right: solid 4px var(--secondary-light);
-	}
-	#overview-blurb {
-		grid-area: over;
+	
+
+	#we-explore, #we-create {
+		/* padding: 2em; */
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
+		padding-top: 2em; 
+		width: auto;
 	}
 	#we-create {
-		grid-area: cre;
+		grid-template-areas: 
+		"head"
+		"ico";
 	}
-	#we-explore, #we-create {
-		background-color: var(--secondary-dark);
-	}
+
+
+
 
 
 	.icon-grid {
-		grid-template-columns: 7em 7em;
-		/* grid-auto-rows: 7em; */
-		padding: 2em;
+		grid-template-columns: repeat(4, 1fr);
+		padding: 3em 1em ;
 	}
-	.icon-grid li {
-		color: var(--background);
-	}
+
 
 
 
 	/*Skills*/
-	#skills {
-		/*margin: 8em 4em;*/
+	/* #skills {
 		margin: 6em 0;
 		display: grid;
 		grid-template-columns: 1fr 3fr;
@@ -1086,20 +1118,18 @@ MEDIA QUERY 3
 	#skills .icon-grid {
 		margin: 0;
 		grid-template-columns: 7em 7em;
-	}
+	} */
 
-	.program-grid {
+	/* .program-grid {
 		padding: 5em;
 		align-self: center; 
 		grid-gap: 2em;
-		/* border: 4px solid var(--secondary-light); */
 	}
 	.program-grid li {
-		/* background-color: var(--secondary-light); */
 		padding: 1em;
 		border-radius: 60px;		
 		border: 3px solid var(--secondary-light);
-	}
+	} */
 
 
 	
@@ -1115,14 +1145,14 @@ MEDIA QUERY 3
 
 
 
-	.project-grid, .year-end-grid {
+	 .project-grid, .year-end-grid {
 		column-count: 3;
 	}
 
 
 
 		/*Careers*/
-	#alumni-success {
+	/* #alumni-success {
 		display: grid; 
 		grid-template-columns: 1fr 1fr;
 		grid-gap: 1em;
@@ -1135,7 +1165,7 @@ MEDIA QUERY 3
 	}
 	.alumni-grid img {
 		object-fit: contain;
-	}
+	} */
 	
 
 }/*last curly*/
