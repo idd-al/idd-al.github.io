@@ -33,17 +33,17 @@
 				<label for="toggle" id="toggle-open"><i class="fas fa-bars"></i></label>
 				<label for="toggle" id="toggle-close"><i class="fas fa-times"></i></label>
 				<ul class="menu-items">
-					<li><a href="#">Overview</a></li>
-					<li><a href="#">Skills</a></li>
-					<li><a href="#">Current Students</a>
+					<li><a href="#overview">Overview</a></li>
+					<li><a href="#skills">Skills</a></li>
+					<li><a href="#current-students">Current Students</a>
 						<!--<ul>
 							<li>Designers of the future</li>
 							<li>Ongoing projects</li>
 							<li>Year End Show</li>
 						</ul>-->
 					</li>
-					<li><a href="#">Year End Show</a></li>
-					<li><a href="#">Careers</a>
+					<li><a href="year-end-show">Year End Show</a></li>
+					<li><a href="#careers">Careers</a>
 						<!--<ul>
 							<li>Our alumni</li>
 						</ul>-->
@@ -63,7 +63,7 @@
 
 		<!--Banner-->
 		<div id="banner">
-			<div class="banner-container"><img class="banner-image" src="img/wireframe-main.jpg"
+			<div><img class="banner-image" src="img/wireframe-main.jpg"
 					alt="sticky note brainstorming session">
 				<!--Photo by Alvaro Reyes on Unsplash-->
 			</div>
@@ -96,7 +96,7 @@
 
 			<!--We explore-->
 			<section id="we-explore">
-				<div class="subheading color-overlay1"><h3>We explore</h3></div>
+				<div class="subheading tint-ideation"><h3>We explore</h3></div>
 				<ul class="icon-grid icon-label color-icon">
 					<!--Mixed realities-->
 					<li>
@@ -129,7 +129,7 @@
 
 			<!--We create-->
 			<section id="we-create">
-				<div class="subheading color-overlay2"><h3>We create</h3></div>
+				<div class="subheading tint-whiteboard"><h3>We create</h3></div>
 				<ul class="icon-grid icon-label color-icon">
 					<!--Social media-->
 					<li>
@@ -169,7 +169,7 @@
 
 			<!--General skills-->
 			<section id="general-skills">
-				<h3 class="subheading">We offer experience in</h3>
+				<div class="subheading tint-collaboration"><h3>We offer experience in</h3></div>
 				<ul id="skills" class="icon-grid icon-label color-icon">
 					<!--Usability testing-->
 					<li>
@@ -197,19 +197,30 @@
 			<!--<hr> line break?-->
 
 			<!--Programs; icons from icons8-->
-			<ul id="programs" class="program-grid program-img">
-				<li><img src="https://img.icons8.com/color/48/000000/adobe-photoshop.png" alt="Adobe Photoshop"></li>
-				<li><img src="https://img.icons8.com/color/48/000000/adobe-illustrator.png" alt="Adobe Illustrator"></li>
-				<li><img src="https://img.icons8.com/color/48/000000/adobe-indesign.png" alt="Adobe Indesign"></li>
-				<li><img src="https://img.icons8.com/color/48/000000/adobe-after-effects.png" alt="Adobe After Effects"></li>
-				<li><img src="https://img.icons8.com/material/48/000000/autodesk-maya.png" alt="Maya"></li>
-				<li><img src="img/zbrush_icon-icons.com.ico" alt="ZBrush"></li>
-				<li><img src="https://img.icons8.com/ios-filled/50/000000/visual-studio-logo.png" alt="Visual Studio"></li>
-				<li><img src="https://img.icons8.com/material/48/000000/github.png" alt="GitHub"></li>
-				<li><img src="https://img.icons8.com/color/48/000000/html-5.png" alt="html"></li>
-				<li><img src="https://img.icons8.com/color/48/000000/css3.png" alt="css"></li>
-				<li><img src="https://img.icons8.com/color/48/000000/javascript.png" alt="javascript"></li>
-			</ul>
+			<section id="programs">
+				<div class="subheading tint-programs"><h3>We use</h3></div>
+				<ul id="program-list" class="program-grid program-img">
+					<li>
+						<img src="https://img.icons8.com/color/48/000000/adobe-photoshop.png" alt="Adobe Photoshop">
+						<!-- <label>Adobe Photoshop</label> -->
+					</li>
+					<li>
+						<img src="https://img.icons8.com/color/48/000000/adobe-illustrator.png" alt="Adobe Illustrator">
+						<!-- <label>Adobe Illustrator</label> -->
+					</li>
+					<li><img src="https://img.icons8.com/color/48/000000/adobe-indesign.png" alt="Adobe Indesign"></li>
+					<li><img src="https://img.icons8.com/color/48/000000/adobe-after-effects.png" alt="Adobe After Effects"></li>
+					<!-- <li><img src="img/xd.ico" alt="Adobe XD"></li> -->
+					<li><img src="https://img.icons8.com/material/48/000000/autodesk-maya.png" alt="Maya"></li>
+					<li><img src="img/zbrush_icon-icons.com.ico" alt="ZBrush"></li>
+					<li><img src="https://img.icons8.com/ios-filled/50/000000/visual-studio-logo.png" alt="Visual Studio"></li>
+					<li><img src="https://img.icons8.com/material/48/000000/github.png" alt="GitHub"></li>
+					<li><img src="https://img.icons8.com/color/48/000000/html-5.png" alt="html"></li>
+					<li><img src="https://img.icons8.com/color/48/000000/css3.png" alt="css"></li>
+					<li><img src="https://img.icons8.com/color/48/000000/javascript.png" alt="javascript"></li>
+				</ul>
+			</section>
+			
 
 		</section>
 
@@ -222,11 +233,11 @@
 
 			<!--Designers of the future-->
 			<section id="designers-of-the-future" class="designers-of-the-future">
-				<h3 class="subheading">Designers of the future</h3>
+				<div class="subheading tint-designers"><h3>Designers of the future</h3></div>
 
-				<section class="big-student-grid">
+				<section class="student-grid">
 					<!--Pacifica Northwest profile-->
-					<blockquote class="student-grid">
+					<blockquote class="student-profile">
 						<div class="student-photo"><img src="img/profile-one-crop.png" alt="student profile picture"></div>
 						<!--Photo by allison griffith on Unsplash-->
 						<div class="student-name">
@@ -241,7 +252,7 @@
 
 
 					<!--Tad Strange profile-->
-					<blockquote class="student-grid">
+					<blockquote class="student-profile">
 						<div class="student-photo"><img src="img/profile-two-crop.png" alt="student profile picture"></div>
 						<!--Photo by Eduardo Dutra on Unsplash-->
 						<div class="student-name">
@@ -255,14 +266,14 @@
 
 
 					<!--Wendy Corduroy profile-->
-					<blockquote class="student-grid">
+					<blockquote class="student-profile">
 						<div class="student-photo"><img src="img/profile-three-crop.png" alt="student profile picture"></div>
 						<!--Photo by sean Kong on Unsplash-->
 						<div class="student-name">
 							<h4>Wendy Corduroy</h4>
 							<h4>Year 3</h4>
 						</div>
-						<p class="student-quote"><!--centered-text--><q>I've really enjoyed my time the program. I'm looking forward to
+						<p class="student-quote"><!--centered-text--><q>I've really enjoyed my time in the program. I'm looking forward to
 								graduation and to being able to use the skills I've gained here out in the real world to leave a
 								positive
 								impact.</q></p>
@@ -273,39 +284,47 @@
 
 			<!--Student projects-->
 			<section id="student-projects">
-				<h3 class="subheading">Student projects</h3>
+				<div class="subheading tint-projects"><h3>Student projects</h3></div>
 
 				<section class="project-grid">
 
 					<!--Stan project-->
-					<figure class="project-image">
-						<img src="img/tech-drawing-one.jpg" alt="perspective drawing">
-						<!--Image by Krasimira_Komneva from Pixabay -->
-						<figcaption class="caption">Stan, Semester 1, Technical Drawing I</figcaption>
+					<figure id="stan" class="project-image">
+						<div>
+							<img src="img/tech-drawing-one.jpg" alt="perspective drawing">
+							<!--Image by Krasimira_Komneva from Pixabay -->
+							<figcaption class="caption">Stan, Semester 1, Technical Drawing I</figcaption>
+						</div>
 					</figure>
 
 
 					<!--Ford project-->
-					<figure class="project-image">
-						<img src="img/info-architecture-one.jpg" alt="wireframing">
-						<!--Photo by Hal Gatewood on Unsplash-->
-						<figcaption class="caption">Ford, Semester 1, Visual Design</figcaption>
+					<figure id="ford" class="project-image">
+						<div>
+							<img src="img/info-architecture-one.jpg" alt="wireframing">
+							<!--Photo by Hal Gatewood on Unsplash-->
+							<figcaption class="caption">Ford, Semester 1, Visual Design</figcaption>
+						</div>
 					</figure>
 
 
 					<!--Mabel project-->
-					<figure class="project-image">
-						<img src="img/threed-vis-one.jpg" alt="chess board render">
-						<!--Image by PIRO4D from Pixabay-->
-						<figcaption class="caption">Mabel, Semester 2, 3D Visualization I</figcaption>
+					<figure id="mabel" class="project-image">
+						<div>
+							<img src="img/threed-vis-one.jpg" alt="chess board render">
+							<!--Image by PIRO4D from Pixabay-->
+							<figcaption class="caption">Mabel, Semester 2, 3D Visualization I</figcaption>
+					</div>
 					</figure>
 
 
 					<!--Dipper project-->
-					<figure class="project-image">
-						<img src="img/isometric.jpg" alt="isometric poster">
-						<!--Image by Dimitris Christou from Pixabay-->
-						<figcaption class="caption">Dipper, Semester 2, Technical Drawing II</figcaption>
+					<figure id="dipper" class="project-image">
+						<div>
+							<img src="img/isometric.jpg" alt="isometric poster">
+							<!--Image by Dimitris Christou from Pixabay-->
+							<figcaption class="caption">Dipper, Semester 2, Technical Drawing II</figcaption>
+						</div>
 					</figure>
 				</section>
 
@@ -324,41 +343,51 @@
 			<section class="year-end-grid">
 
 				<!--Glasses composite-->
-				<figure class="project-image">
-					<img src="img/tech-drawing-two.jpg" alt="glasses composite">
-					<!--Photo by Matthew Fassnacht on Unsplash-->
-					<figcaption class="caption">Soos, Photoshop composite</figcaption>
+				<figure id="glasses" class="project-image">
+					<div>
+						<img src="img/tech-drawing-two.jpg" alt="glasses composite">
+						<!--Photo by Matthew Fassnacht on Unsplash-->
+						<figcaption class="caption">Soos, Photoshop composite</figcaption>
+				</div>
 				</figure>
 
 
 				<!--VR headset-->
-				<figure class="project-image">
-					<img src="img/vr-headset-guy.jpg" alt="man wearing VR headest">
-					<!--Photo by Uriel Soberanes on Unsplash-->
-					<figcaption class="caption">Blendin, VR video game</figcaption>
+				<figure id="headset" class="project-image">
+					<div>
+						<img src="img/vr-headset-guy.jpg" alt="man wearing VR headest">
+						<!--Photo by Uriel Soberanes on Unsplash-->
+						<figcaption class="caption">Blendin, VR video game</figcaption>
+					</div>
 				</figure>
 
 
 				<!--LED installation-->
-				<figure class="project-image">
-					<img src="img/led-installation.jpg" alt="LED installation">
-					<!--Photo by Jonas Denil on Unsplash-->
-					<figcaption class="caption">Susan, lights intsllation</figcaption>
+				<figure id="led" class="project-image">
+					<div>
+						<img src="img/led-installation.jpg" alt="LED installation">
+						<!--Photo by Jonas Denil on Unsplash-->
+						<figcaption class="caption">Susan, lights installation</figcaption>
+					</div>
 				</figure>
 
 
 				<!--AR app-->
-				<figure class="project-image">
-					<img src="img/ar-app.jpg" alt="glasses composite">
-					<!--Photo by Patrick Schneider on Unsplash-->
-					<figcaption class="caption">Fiddleford, AR app</figcaption>
+				<figure id="ar" class="project-image">
+					<div>
+						<img src="img/ar-app.jpg" alt="glasses composite">
+						<!--Photo by Patrick Schneider on Unsplash-->
+						<figcaption class="caption">Fiddleford, AR app</figcaption>
+					</div>
 				</figure>
 
 				<!--3D model-->
-				<figure class="project-image">
-					<img src="img/3d-skull.jpg" alt="3D model of skull">
-					<!--Photo by NeONBRAND on Unsplash-->
-					<figcaption class="caption">Grenda, 3D-printed skull</figcaption>
+				<figure id="3d" class="project-image">
+					<div>
+						<img src="img/3d-skull.jpg" alt="3D model of skull">
+						<!--Photo by NeONBRAND on Unsplash-->
+						<figcaption class="caption">Grenda, 3D-printed skull</figcaption>
+					</div>
 				</figure>
 
 
@@ -390,12 +419,12 @@
 
 			<!--Alumni success-->
 			<section id="alumni">
-				<h3 class="subheading">Our alumni</h3>
+				<div class="subheading tint-alumni"><h3>Our alumni</h3></div>
 
 				<section id="alumni-success">
 					<!--Alum Pidge-->
 					<blockquote class="alumni-grid">
-						<img src="img/mobile-designer.jpg" alt="girl using phone">
+						<div class="alumni-photo"><img src="img/mobile-designer.jpg" alt="girl using phone"></div>
 						<!--Photo by CoinView App on Unsplash-->
 						<div class="alumni-name">
 							<h4>Pidge Gunderson</h4>
@@ -406,7 +435,7 @@
 
 					<!--Alum Lance-->
 					<blockquote class="alumni-grid">
-						<img src="img/seo-specialist.jpg" alt="man writing on board">
+						<div class="alumni-photo"><img src="img/seo-specialist.jpg" alt="man writing on board"></div>
 						<!--Photo by Diggity Marketing on Unsplash-->
 						<div class="alumni-name">
 							<h4>Lance McClain</h4>
@@ -417,7 +446,7 @@
 
 					<!--Alum Keith-->
 					<blockquote class="alumni-grid">
-						<img src="img/web-developer.jpg" alt="man coding">
+						<div class="alumni-photo"><img src="img/web-developer.jpg" alt="man coding"></div>
 						<!--Photo by Patrick Amoy on Unsplash-->
 						<div class="alumni-name">
 							<h4>Keith G.</h4>
@@ -440,11 +469,11 @@
 			<section id="jump-to">
 				<h3>Jump to</h3>
 				<ul>
-					<li><a href="#">Overview</a></li>
-					<li><a href="#">Skills</a></li>
-					<li><a href="#">Current students</a></li>
-					<li><a href="#">Year End Show</a></li>
-					<li><a href="#">Careers</a></li>
+					<li><a href="#overview">Overview</a></li>
+					<li><a href="#skills">Skills</a></li>
+					<li><a href="#current-students">Current students</a></li>
+					<li><a href="#year-end-show">Year End Show</a></li>
+					<li><a href="#careers">Careers</a></li>
 					<!--<li><a href="#">Related programs</a></li>-->
 				</ul>
 			</section>

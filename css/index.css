@@ -11,6 +11,7 @@ html {
 	--on-dark: #ffffff;
 
 	--secondary-light: #0997a1;
+	--secondary-tint: (9, 151, 161);
 	/*--secondary-a-light: #71aac8;*/
 	--secondary-dark: #085c6b;
 	/*--secondary-b: #6b2b84;
@@ -32,16 +33,16 @@ html {
 /****************
 GENERAL
 *****************/
-body {
-	background: var(--secondary-dark) url(/img/wireframe-main.jpg);
+/* body {
+	background: var(--secondary-light) url(/img/wireframe-main.jpg);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-	/* background-color: var(--secondary-dark); */
+	background-color: var(--secondary-light);
 	min-height: 100%;
 	height: 100%;
-}
+} */
 
 
 
@@ -61,7 +62,7 @@ body {
 .heading h3 {
 	font-size: 1.17em;
 	font-weight: 600;
-	padding: 1em 2em;
+	/* padding: 1em 2em; */
 }
 .heading h4 {
 	font-size: 1em;
@@ -70,6 +71,8 @@ body {
 .subheading {
 	background-color: var(--secondary-light);
 	color: var(--on-dark);
+	padding: 4em 2em;
+	text-align: center; 
 }
 
 /*TEXT*/
@@ -206,7 +209,7 @@ Banner photo
 *****************/
 #banner {
 	position: relative;
-	background-color: var(--secondary-dark);
+	background-color: var(--secondary-light);
 }
 .banner-image {
 	padding-top: 77.6px;
@@ -256,12 +259,17 @@ Banner photo
 OVERVIEW, SKILLS
 *****************/
 	.icon-grid, .program-grid {
-		padding: 1em 2em;
 		display: grid;
 		grid-template-columns: 7em 7em;
 		grid-auto-rows: 7em;
 		grid-gap: 2em;
-		justify-content: center;
+		justify-content: space-evenly;
+	}
+	.icon-grid {
+		padding: 2em 2em 1em;
+	}
+	.program-grid {
+		padding: 1em 2em 2em;
 	}
 
 	
@@ -274,6 +282,7 @@ OVERVIEW, SKILLS
 	.program-img li {
 		align-self: center;
 	}
+	
 
 	.icon-label i {
 		font-size: 2em;
@@ -281,10 +290,100 @@ OVERVIEW, SKILLS
 	}
 
 
+	/*Color overlays*/
+	/* .tint {
+		background: 
+		linear-gradient(
+			rgba(9, 151, 161, 0.7), 
+			rgba(9, 151, 161, 0.7)
+		),
+	} */
+	.tint-ideation {
+		background-image: 
+			linear-gradient(
+				rgba(9, 151, 161, 0.7), 
+				rgba(9, 151, 161, 0.7)
+			),
+			url(/img/ideation-sticky-note.jpg);
+			/*Photo by You X Ventures on Unsplash*/
+		background-size: cover;
+		background-position: top;
+	}
+	
+	.tint-whiteboard {
+		background: 
+			linear-gradient(
+				rgba(9, 151, 161, 0.7), 
+				rgba(9, 151, 161, 0.7)
+			),
+			url(/img/whiteboard.jpg);
+			/*Photo by Kaleidico on Unsplash*/
+			background-size: cover;
+			background-position: top;
+	}
+
+	.tint-collaboration {
+		background: 
+			linear-gradient(
+				rgba(9, 151, 161, 0.7), 
+				rgba(9, 151, 161, 0.7)
+			),
+			url(/img/laptops.jpg);
+			/*Photo by Marvin Meyer on Unsplash*/
+			background-size: cover;
+			background-position: top;
+	}
+
+	.tint-designers {
+		background: 
+			linear-gradient(
+				rgba(9, 151, 161, 0.7), 
+				rgba(9, 151, 161, 0.7)
+			),
+			url(/img/designers.jpg);
+			/*Photo by Naassom Azevedo on Unsplash*/
+			background-size: cover;
+			background-position: center;
+	}
+	.tint-programs {
+		background: 
+			linear-gradient(
+				rgba(9, 151, 161, 0.7), 
+				rgba(9, 151, 161, 0.7)
+			),
+			url(/img/mac.jpg);
+			/*Photo by Kaitlyn Baker on Unsplash*/
+			background-size: cover;
+			background-position: center;
+	}
+	.tint-projects {
+		background: 
+			linear-gradient(
+				rgba(9, 151, 161, 0.7), 
+				rgba(9, 151, 161, 0.7)
+			),
+			url(/img/art-and-design.jpg);
+			/*Photo by William Iven on Unsplash*/
+			background-size: cover;
+			background-position: center;
+	}
+
+	.tint-alumni {
+		background: 
+			linear-gradient(
+				rgba(62, 115, 119, 0.7), 
+				rgba(9, 151, 161, 0.7)
+			),
+			url(/img/grad-cap.jpg);
+			/*Image by Gillian Callison from Pixabay*/
+			background-size: cover;
+			background-position: top;
+	}
+
 /****************
 	STUDENT PROFILE
 *****************/
-	.student-grid {
+	.student-profile {
 		padding: 1em 2em;
 		display: grid;
 		grid-template-columns: 5.5em auto;
@@ -292,6 +391,7 @@ OVERVIEW, SKILLS
 		"img name"
 		"quo quo";
 		grid-gap: 1em;
+		/* border-left: solid var(--secondary-dark) 5px; */
 	}
 
 	/*#designers-of-the-future blockquote:nth-of-type(2n) {
@@ -326,16 +426,28 @@ OVERVIEW, SKILLS
 /****************
 STUDENT PROJECTS
 *****************/
-	.project-grid > figure {
+	/* .project-grid > figure {
 		padding: 1em 2em;
-	}
+	} */
 
 	.project-image img {
 		width: 100%;
 	}
 
-	.project-image {
+	/* .project-image {
 		padding: 1em 2em;
+	} */
+	.project-grid figure, .year-end-grid figure {
+		margin: 2em;
+	}
+	.project-image div {
+		position: relative;
+	}
+	.project-grid figcaption, .year-end-grid figcaption {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		opacity: .75;
 	}
 
 	.caption {
@@ -385,6 +497,9 @@ FOOTER
 #top-footer section:last-child {
 	padding-bottom: 0;
 }
+#top-footer h3, #top-footer ul li {
+	text-align: left;
+}
 #bottom-footer {
 	background-color: var(--secondary-light);
 	text-align: center;
@@ -406,9 +521,11 @@ FOOTER
 	padding: .2em 0;
 }
 
+
 #contact, #legal {
 	display: none;
 }
+
 
 .social-media li {
 	display: inline-block;
@@ -432,7 +549,7 @@ MEDIA QUERY 1 640PX
 
 	/*Icon grid, program grid*/
 	.icon-grid, .program-grid {
-		grid-template-columns: 7em 7em 7em 7em;
+		grid-template-columns: repeat(4, 7em);
 	}
 	.icon-grid {
 		grid-gap: 2em;
@@ -440,13 +557,13 @@ MEDIA QUERY 1 640PX
 
 
 	/*Designers of the future grid*/
-	.big-student-grid {
+	.student-grid {
 		padding: 2em;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-gap: 1em;
 	}
-	.student-grid {
+	.student-profile {
 		 padding: 0;
 		 grid-template-rows: 6em; 
 	}
@@ -462,6 +579,10 @@ MEDIA QUERY 1 640PX
 		column-count: 2;
 		column-gap: 1em;
 	}
+	.project-grid figure, .year-end-grid figure {
+		display: block;
+		margin: 0;
+	}
 	#student-projects .project-image, #year-end-show .project-image  {
 		padding: 0 0 1em 0;
 		-webkit-column-break-inside: avoid;
@@ -469,7 +590,19 @@ MEDIA QUERY 1 640PX
     break-inside: avoid;
 	}
 
+	/* .project-grid, .year-end-grid {
+		padding: 2em;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: repeat(4,1fr);
+		grid-gap: 1em;
+	}
 
+	.project-grid figure, .year-end-grid figure {
+		margin: 0;
+		display: 
+
+	} */
 
 	/*Careers*/
 	#alumni-success {
@@ -484,8 +617,13 @@ MEDIA QUERY 1 640PX
 		"img name"
 		"img quo";
 	}
-	.alumni-grid img {
+	.alumni-photo {
 		grid-area: img;
+	}
+	.alumni-photo img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 	}
 	.alumni-name {
 		grid-area: name;
@@ -495,7 +633,10 @@ MEDIA QUERY 1 640PX
 	}
 
 	
-
+	#top-footer {
+		display: grid; 
+		grid-template-columns: repeat(4, 1fr);
+	}
 	/*#alumni-success  {
 		display: grid;
 		grid-template-columns: auto auto;
@@ -517,9 +658,10 @@ MEDIA QUERY 1 640PX
 		grid-area: quo;
 	}*/
 
-	#top-footer {
+	/* #top-footer {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
+		 */
 		/*display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: auto auto;
@@ -527,11 +669,11 @@ MEDIA QUERY 1 640PX
 		"jump imp"
 		/*"social social"
 		"copy copy";		
-		grid-gap: 1em;*/
-	}
-	.bottombar section {
+		grid-gap: 1em;
+	}*/
+	/* .bottombar section {
 		padding: 0;
-	}
+	} */
 	/*#jump-to {
 		grid-area: jump;
 	}
@@ -640,9 +782,9 @@ MEDIA QUERY 2  768PX
 	}*/
 	
 	
-	.icon-grid li {
+	/* .icon-grid li {
 		color: var(--primary);
-	}
+	} */
 
 
 
@@ -667,12 +809,12 @@ MEDIA QUERY 2  768PX
 		#we-explore {
 			grid-area: exp;	
 		}
-		#we-explore div {
-			/* background-color: black; */
-			/* background: url(/img/ideation-sticky-note.jpg); */
+		/* #we-explore div {
+			background-color: black;
+			background: url(/img/ideation-sticky-note.jpg);
 			background-size: cover;
-			/* opacity: .7; */
-		}
+			opacity: .7;
+		} */
 		#we-create {
 			grid-area: cre;
 			grid-template-areas: 
@@ -686,38 +828,48 @@ MEDIA QUERY 2  768PX
 			grid-area: ico;
 		}
 
-		
-		#we-explore div, #we-create div {
+		#we-explore h3, #we-create h3, #general-skills h3, #programs h3 {
+			font-size: 2em;
+			padding: 1em;
+		}
+		#we-explore div, #we-create div, #general-skills div, #programs div{
 			/* background-color: var(--secondary-light); */
+			padding: 0;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			background-size: cover;
 		}
-		#we-explore .icon-grid, #we-create .icon-grid {
+		.icon-grid {
 			grid-template-columns: 7em 7em;
 		}
+	
 
-		/*Color overlays*/
-		.color-overlay1 {
-			background: 
-				linear-gradient(
-					rgba(4, 59, 64, 0.5), 
-					rgba(4, 59, 64, 0.5)
-				),
-				url(/img/ideation-sticky-note.jpg);
-				/*Photo by You X Ventures on Unsplash*/
+
+
+		#general-skills {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+		#programs {
+			display: grid; 
+			grid-template-columns: 1fr 1fr;
+			grid-template-areas: 
+			"ico head";
+		}
+		#program-list {
+			grid-area: ico;
+		}
+		.program-grid {
+			grid-template-columns: repeat(4, auto);
+			grid-auto-rows: 5em;
+			grid-gap: 1em;
+			justify-content: space-evenly;
+			padding: 2em;
 		}
 		
-		.color-overlay2 {
-			background: 
-				linear-gradient(
-					rgba(4, 59, 64, 0.5), 
-					rgba(4, 59, 64, 0.5)
-				),
-				url(/img/whiteboard.jpg);
-				/*Photo by Kaleidico on Unsplash*/
-		}
+
+
 
 
 		
@@ -728,8 +880,8 @@ MEDIA QUERY 2  768PX
 			text-align: center; 
 			align-self: center; 
 			background-color: var(--secondary-light);
-			top: 50%; */
-		}
+			top: 50%; 
+		}*/
 	
 		/* #we-explore div {
 			background-color: var(--secondary-light);
@@ -760,10 +912,10 @@ MEDIA QUERY 2  768PX
 
 
 	/*Footer*/
-	#contact, #legal {
+	/* #contact, #legal {
 		display: block;
-	}
-	#contact img {
+	} */
+	/* #contact img {
 		width: 50%;
 	}
 
@@ -790,7 +942,7 @@ MEDIA QUERY 2  768PX
 	}
 	#top-footer h3 {
 		padding: 0 0 1em 0;
-	}
+	} */
 
 }/*last curly*/
 
@@ -864,7 +1016,7 @@ MEDIA QUERY 3
 	#skills-blurb {
 		grid-area: blurb;
 	}
-	#programs {
+	#program-list {
 		grid-area: pro;
 	}
 	#general-skills {
@@ -895,9 +1047,9 @@ MEDIA QUERY 3
 
 	/*Current students*/
 
-	#current-students {
-		/*margin: 8em 4em;*/
-	}
+	/* #current-students {
+		margin: 8em 4em;
+	} */
 
 
 
