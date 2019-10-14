@@ -12,11 +12,8 @@ html {
 
 	--secondary-light: #0997a1;
 	--secondary-tint: (9, 151, 161);
-	/*--secondary-a-light: #71aac8;*/
 	--secondary-dark: #085c6b;
-	/*--secondary-b: #6b2b84;
-	--secondary-b-light: #a967aa;
-	--secondary-b-dark: #412669;*/
+
 
 
 
@@ -24,8 +21,8 @@ html {
 	FONT
 	*****************/
 
-	--heading: 'Montserrat', sans-serif;
-	--body: 'Hind', sans-serif;
+	--heading: 'Montserrat', Verdana, sans-serif;
+	--body: 'Hind', Arial, sans-serif;
 
 }
 
@@ -62,7 +59,6 @@ GENERAL
 .heading h3 {
 	font-size: 1.17em;
 	font-weight: 600;
-	/* padding: 1em 2em; */
 }
 .heading h4 {
 	font-size: 1em;
@@ -173,8 +169,9 @@ input[type=checkbox]:checked ~ ul, input[type=checkbox]:checked ~ #toggle-close 
 }
 
 /*Menu panel*/
+
 .menu-items {
-	background-color: var(--background);
+	background-color: var(--secondary-light);
 	color: var(--primary);
 	position: absolute;
 	z-index: 9998;
@@ -185,6 +182,7 @@ input[type=checkbox]:checked ~ ul, input[type=checkbox]:checked ~ #toggle-close 
 	top:77.6px;
 }
 .menu-items li {
+	background-color: var(--background);
 	list-style: none;
 	padding: 1em 2em;
 }
@@ -232,30 +230,7 @@ Banner photo
 
 
 
-/* #banner {
-	position: relative;
-}
-.banner-container {
-	background-color: var(--primary);
-	width: 100%;
-	position: relative;
-}
-.banner-image {
-	opacity: .6;
-} */
-/* .text-overlay {
-	display: none;
-	padding: 2em;
-	list-style: none;
-	position: absolute;
-	bottom: 0; 
-	width: 100%;
-}
-.text-overlay li h2 {
-	padding: .25em;
-	color: var(--on-dark);
-	text-align: left;
-} */
+
 
 
 /****************
@@ -394,16 +369,9 @@ OVERVIEW, SKILLS
 		"img name"
 		"quo quo";
 		grid-gap: 1em;
-		/* border-left: solid var(--secondary-dark) 5px; */
 	}
 
-	/*#designers-of-the-future blockquote:nth-of-type(2n) {
-		grid-template-columns: auto 5.5em;
-		grid-template-areas: 
-		"name img"
-		"quo quo";
-	}*/
-
+	
 
 
 	.student-photo {
@@ -429,17 +397,10 @@ OVERVIEW, SKILLS
 /****************
 STUDENT PROJECTS
 *****************/
-	/* .project-grid > figure {
-		padding: 1em 2em;
-	} */
 
 	.project-image img {
 		width: 100%;
 	}
-
-	/* .project-image {
-		padding: 1em 2em;
-	} */
 	.project-grid figure, .year-end-grid figure {
 		margin: 2em;
 	}
@@ -478,9 +439,7 @@ CAREERS/ALUMNI
 .alumni-name h4 {
 	font-weight: 600;
 }
-/*.alumni-grid p {
-	padding: 1em 0;
-}*/
+
 
 
 
@@ -490,7 +449,6 @@ CAREERS/ALUMNI
 FOOTER
 ******************************************/
 #top-footer, #bottom-footer {
-	/*background-color: var(--primary);*/
 	color: var(--on-dark);
 	padding: 2em;
 }
@@ -545,10 +503,6 @@ BREAKPOINTS
 MEDIA QUERY 1 640PX
 *******************/
 @media screen and (min-width: 640px) {
-	/*Banner + text overlay*/
-	/* .text-overlay {
-		display: block;
-	} */
 
 	/*Icon grid, program grid*/
 	.icon-grid, .program-grid {
@@ -559,14 +513,7 @@ MEDIA QUERY 1 640PX
 	}
 
 
-	/*Designers of the future grid*/
-	/* #designers-of-the-future  {
-		padding: 2em;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template
-		grid-gap: 1em;
-	} */
+
 	.student-profile {
 		 /* padding: 2em 10em; */
 		 grid-template-rows: 6em; 
@@ -598,24 +545,10 @@ MEDIA QUERY 1 640PX
     break-inside: avoid;
 	}
 
-	/* .project-grid, .year-end-grid {
-		padding: 2em;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: repeat(4,1fr);
-		grid-gap: 1em;
-	}
-
-	.project-grid figure, .year-end-grid figure {
-		margin: 0;
-		display: 
-
-	} */
+	
 
 	/*Careers*/
-	/* #alumni-success {
-		padding: 2em;
-	} */
+
 	.alumni-grid {
 		padding: 2em;
 		display: grid;
@@ -645,56 +578,7 @@ MEDIA QUERY 1 640PX
 		display: grid; 
 		grid-template-columns: repeat(4, 1fr);
 	}
-	/*#alumni-success  {
-		display: grid;
-		grid-template-columns: auto auto;
-	}
-	.alumni-grid {
-		grid-template-columns: auto auto;
-		grid-template-areas:
-		"img quo"
-		"cap quo";
-		column-gap: 1em; 
-	}
-	.alumni-grid img {
-		grid-area: img;
-	}
-	.caption {
-		grid-area: cap;
-	}
-	.alumni-grid p {
-		grid-area: quo;
-	}*/
 
-	/* #top-footer {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		 */
-		/*display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: auto auto;
-		grid-template-areas: 
-		"jump imp"
-		/*"social social"
-		"copy copy";		
-		grid-gap: 1em;
-	}*/
-	/* .bottombar section {
-		padding: 0;
-	} */
-	/*#jump-to {
-		grid-area: jump;
-	}
-	#important-links {
-		grid-area: imp;
-	}*/
-	/*#social-media {
-		grid-area: social;
-	}
-	#copyright {
-		grid-area: copy;
-		text-align: center;
-	}*/
 
 }/*last curly*/
 
@@ -706,16 +590,6 @@ MEDIA QUERY 1 640PX
 MEDIA QUERY 2  768PX
 ********************/
 @media screen and (min-width: 768px) {
-
-	/*main {
-		padding-top: 500px;
-	}*/
-
-	
-	/* .text-overlay {
-		top: 400px; 
-		justify-self: center;
-	} */
 
 	/*Topbar*/
 	.topbar-grid {
@@ -751,6 +625,7 @@ MEDIA QUERY 2  768PX
 		text-align: left;
 	}
 	.menu-items li {
+		background-color: var(--primary);
 		display: inline-block;
 		padding: .5em;
 		text-align: center;
@@ -764,37 +639,6 @@ MEDIA QUERY 2  768PX
 	.menu-items li:hover {
 		border-bottom: 2px solid var(--secondary-light);
 	}
-
-	/* .banner-container {
-		position: fixed;
-		z-index: -1;
-		height: 100vh;
-		width: 100%;
-		background-size: cover;
-	} */
-	
-	/*.banner-container {
-		width: 100%;
-		height: 100%;
-		position: fixed;
-		z-index: -1;
-		top: 0;
-		left: 0;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-	}
-	.banner-image {
-		object-fit: cover;
-	}*/
-	
-	
-	/* .icon-grid li {
-		color: var(--primary);
-	} */
-
-
 
 
 	/*Overview*/
@@ -816,12 +660,7 @@ MEDIA QUERY 2  768PX
 		#we-explore {
 			grid-area: exp;	
 		}
-		/* #we-explore div {
-			background-color: black;
-			background: url(/img/ideation-sticky-note.jpg);
-			background-size: cover;
-			opacity: .7;
-		} */
+
 		#we-create {
 			grid-area: cre;
 			grid-template-areas: 
@@ -840,6 +679,7 @@ MEDIA QUERY 2  768PX
 		#general-skills h3, 
 		#programs h3, 
 		#designers-of-the-future h3,
+		#student-projects h3,
 		#alumni h3 {
 			font-size: 2em;
 			padding: 1em;
@@ -849,8 +689,8 @@ MEDIA QUERY 2  768PX
 		#general-skills div, 
 		#programs div, 
 		#designers-of-the-future .subheading,
+		#student-projects .subheading,
 		#alumni .subheading {
-			/* background-color: var(--secondary-light); */
 			padding: 0;
 			display: flex;
 			align-items: center;
@@ -884,34 +724,6 @@ MEDIA QUERY 2  768PX
 			justify-content: space-evenly;
 			padding: 2em;
 		}
-		
-
-
-
-
-		
-
-
-
-		/* #we-explore div h3, #we-create h3 {
-			text-align: center; 
-			align-self: center; 
-			background-color: var(--secondary-light);
-			top: 50%; 
-		}*/
-	
-		/* #we-explore div {
-			background-color: var(--secondary-light);
-			text-align: center; 
-		} */
-
-		
-		
-
-		/* .icon-grid {
-			grid-template-columns: 7em 7em 7em 7em;
-		} */
-
 
 
 	#designers-of-the-future {
@@ -926,25 +738,8 @@ MEDIA QUERY 2  768PX
 	}
 
 
-	
 
-
-
-
-
-
-
-
-	/*Careers*/
-	/* #alumni-success {
-		display: grid; 
-		grid-template-columns: 1fr 1fr;
-		grid-gap: 1em;
-	}
-	.alumni-grid {
-		padding: 0;
-	} */
-	#alumni-success {
+	#alumni {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 	}
@@ -999,12 +794,6 @@ MEDIA QUERY 2  768PX
 		grid-area: legal;
 	}
 
-	/*#top-footer h3, #top-footer li {
-		text-align: left;
-	}
-	#top-footer h3 {
-		padding: 0 0 1em 0;
-	} */
 
 }/*last curly*/
 
@@ -1022,16 +811,7 @@ MEDIA QUERY 3
 		max-width: 1000px;
 		margin: 0 auto;
 	}
-	/* .text-container {
-		max-width: 1000px;
-		margin: 0 auto;
-	} */
-	
-	
-	/* body {
-		max-width: 800px;
-		justify-content: center; 
-	} */
+
 
 	.topbar {
 		font-size: 1.2em;
@@ -1040,28 +820,27 @@ MEDIA QUERY 3
 		grid-gap: 15em;
 	}
 	
-	/*
-	.menu-items li {	
-		padding: 1em;
-		font-size: 1em;
-	}*/
 
 
 	/*MAIN*/
+	.heading h2 {
+		font-size: 1.3em;
+	}
+	.section-blurb {
+		padding: 3em 15em;
+		width: 100%;
+		text-align: center; 
+		font-size: 1.2em;
+	}
 
 	#banner .text-overlay h2 {
 		font-size: 3.5em;
 	}
-
+	
 
 
 	/*Overview*/
-	
-	.section-blurb {
-		padding: 4em 15em;
-		width: 100%;
-		text-align: center; 
-	}
+
 
 	#overview-blocks {
 		grid-template-columns: auto auto;
@@ -1108,71 +887,23 @@ MEDIA QUERY 3
 
 
 
-
-
-
-
-	/* #skills {
-		margin: 6em 0;
-		display: grid;
-		grid-template-columns: 1fr 3fr;
-		grid-template-areas:
-		"pro blurb"
-		"pro gen";
-	}
-	#skills-blurb {
-		grid-area: blurb;
-	}
-	#program-list {
-		grid-area: pro;
-	}
-	#general-skills {
-		grid-area: gen;
-		background-color: var(--secondary-dark);
-	}
-	#skills .icon-grid {
-		margin: 0;
-		grid-template-columns: 7em 7em;
-	} */
-
-	/* .program-grid {
-		padding: 5em;
-		align-self: center; 
-		grid-gap: 2em;
-	}
-	.program-grid li {
-		padding: 1em;
-		border-radius: 60px;		
-		border: 3px solid var(--secondary-light);
-	} */
-
-
-	
-
-
 	/*Current students*/
 	#designers-of-the-future {
-		padding: 2em;
+		padding: 2em 0;
 		grid-gap: 2em;
 	}
 	.student-profile {
 		padding: 0;
 	}
-	/* #current-students {
-		margin: 8em 4em;
-	} */
-
-
 
 
 
 	 .project-grid, .year-end-grid {
+		padding: 2em 0;
 		column-count: 3;
 		column-gap: 2em;
 	}
-	/* .project-grid figure {
-		padding-bottom: 2em;
-	} */
+
 	
 
 
@@ -1180,10 +911,10 @@ MEDIA QUERY 3
 		#career-blurb ul {
 			text-align: left; 
 			padding-left: 9em;
-			max-width: 700px;
+			/* max-width: 700px; */
 			margin: 0 auto;
 		}
-		#alumni-success {
+		#alumni {
 			padding: 2em 0;
 			grid-gap: 2em;
 		}
@@ -1192,20 +923,6 @@ MEDIA QUERY 3
 		}
 
 
-	/* #alumni-success {
-		display: grid; 
-		grid-template-columns: 1fr 1fr;
-		grid-gap: 1em;
-	}
-	#alumni-success p {
-		font-size: .9em;
-	}
-	.alumni-grid {
-		padding: 0;
-	}
-	.alumni-grid img {
-		object-fit: contain;
-	} */
 	.bottombar {
 		background-color: var(--secondary-dark);
 	}
@@ -1218,5 +935,138 @@ MEDIA QUERY 3
 
 
 
+
+
+/****************
+MEDIA QUERY 4
+*****************/
+@media screen and (min-width: 1920px) {
+.container {
+	max-width: 1400px;
+}
+.big-container {
+	max-width: 1800px;
+	margin: 0 auto;
+}
+
+.heading h2 {
+	font-size: 1.7em;
+}
+
+.text-overlay li {
+	font-size: 1.5em;
+}
+/* .section-blurb {
+	padding: 0;
+} */
+
+#overview, 
+#skills, 
+#current-students,
+#student-projects, 
+#year-end-show, 
+#careers, 
+footer {
+	padding-top: 4em;
+}
+/*Overview*/
+#overview {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-template-rows: 1fr;
+	grid-template-areas: 
+	"blurb blocks";
+}
+#overview-blurb {
+	grid-area: blurb;
+	background-color: var(--primary);
+	padding: 2em 3em;
+}
+
+#overview-blocks {
+	grid-area: blocks;
+	grid-gap: 2em;
+	padding-left: 2em;
+	width: 100%;
+}
+#overview-blurb{
+	/* display: flex; */
+	align-self: center; 
+	justify-content: center;
+	background-size: cover; 
+	padding: 2em 3em;
+	height: 100%;
+}
+#we-explore, #we-create {
+	padding: 0;
+}
+
+
+
+/*Skills*/
+#skills {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	grid-template-areas: 
+	". . blurb"
+	"pro pro pro";
+}
+#skills-blurb {
+	grid-area: blurb;
+}
+#general-skills, #programs {
+	width: 100%;
+}
+#general-skills {
+	padding-right: 1em;
+	padding-top: 0;
+}
+#programs {
+	padding: 0 2em 0 1em;
+}
+.program-grid {
+	padding-bottom: 0;
+}
+
+.section-blurb {
+	padding: 2em;
+}
+
+
+/*Current students*/
+#current-students {
+	display: grid;
+	grid-template-columns: .5fr 1fr;
+	grid-template-areas: 
+	"blurb prof"
+	"proj proj";
+}
+#current-students-blurb {
+	grid-area: blurb;
+}
+#designers-of-the-future {
+	grid-area: prof;
+	padding-left: 2em;
+}
+#student-projects {
+	grid-area: proj;
+}
+
+.tint-projects { 
+	height: 6.5em;
+}
+.project-grid, .year-end-grid {
+	column-count: 4;
+}
+
+
+
+#alumni {
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+}/*last curly*/
 
 
