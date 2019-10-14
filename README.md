@@ -78,20 +78,19 @@
 - Note: material.io
 
 ### Colours
-![image](https://user-images.githubusercontent.com/52459805/66002003-b5424500-e470-11e9-9353-9ad14bfcaa34.png)
+![image](https://user-images.githubusercontent.com/52459805/66727310-4f5ca280-ee0c-11e9-9aa8-608e29e51566.png)
 
 
 ```
-- #101530: header, footer, section blurb, text on light background
+- #05323f: header, section blurb, text on light background
 - #ffffff: main page background, text on dark background
-- #306c99: subheading block
-- #71aac8: accents on dark background
-- #6b2b84: icons + labels, figcaptions
-- #a967aa: accents on dark background
+- #0b5d6b: icon colour, figcaption
+- #0797a1: subheading coloour overlay
 ```
 
 ### Fonts
-![image](https://user-images.githubusercontent.com/52459805/66002067-d2771380-e470-11e9-96c2-dc0ce605581a.png)
+![image](https://user-images.githubusercontent.com/52459805/66727705-edea0300-ee0e-11e9-9ce9-0b26a539f4ed.png)
+
 
 
 
