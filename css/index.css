@@ -11,7 +11,7 @@ html {
 	--on-dark: #ffffff;
 
 	--secondary-light: #0997a1;
-	--secondary-tint: (9, 151, 161);
+	/* --secondary-tint: (9, 151, 161); */
 	--secondary-dark: #085c6b;
 
 
@@ -48,13 +48,15 @@ GENERAL
 	font-family: var(--heading);
 	margin: 0;
 }
-.heading h1 {font-weight: 800; font-size: 1.5em;}
+.heading h1 {
+	font-weight: 800;
+	font-size: 1.5em;
+}
 .heading h2 {
 	font-size: 1.5em;
 	font-weight: 700;
 	text-align: center; 
 	padding-bottom: .5em;
-	/*padding: 1em 2em 0;*/
 }
 .heading h3 {
 	font-size: 1.17em;
@@ -161,17 +163,21 @@ HEADER
 	position: absolute;
 	z-index: 9999;
 }
-input[type=checkbox], #toggle-close, input[type=checkbox] ~ ul,  input[type=checkbox]:checked ~ #toggle-open {
+input[type=checkbox], 
+#toggle-close, 
+input[type=checkbox] ~ ul,  
+input[type=checkbox]:checked ~ #toggle-open {
 	display: none;
 }
-input[type=checkbox]:checked ~ ul, input[type=checkbox]:checked ~ #toggle-close {
+input[type=checkbox]:checked ~ ul, 
+input[type=checkbox]:checked ~ #toggle-close {
 	display: block;
 }
 
 /*Menu panel*/
 
 .menu-items {
-	background-color: var(--secondary-light);
+	background-color: var(--background);
 	color: var(--primary);
 	position: absolute;
 	z-index: 9998;
@@ -182,7 +188,6 @@ input[type=checkbox]:checked ~ ul, input[type=checkbox]:checked ~ #toggle-close 
 	top:77.6px;
 }
 .menu-items li {
-	background-color: var(--background);
 	list-style: none;
 	padding: 1em 2em;
 }
@@ -202,6 +207,15 @@ input[type=checkbox]:checked ~ ul, input[type=checkbox]:checked ~ #toggle-close 
 MAIN
 ******************************************/
 
+/*Color overlays*/
+	/* .tint {
+		background: 
+		linear-gradient(
+			rgba(9, 151, 161, 0.7), 
+			rgba(9, 151, 161, 0.7)
+		),
+	} */
+	
 /****************
 Banner photo
 *****************/
@@ -229,27 +243,65 @@ Banner photo
 
 
 
-
-
-
-
 /****************
 OVERVIEW, SKILLS
 *****************/
-	.icon-grid, .program-grid {
+.tint-ideation {
+	background-image: 
+		linear-gradient(
+			rgba(9, 151, 161, 0.7), 
+			rgba(9, 151, 161, 0.7)
+		),
+		url(/img/ideation-sticky-note.jpg);
+		/*Photo by You X Ventures on Unsplash*/
+	background-size: cover;
+	background-position: top;
+}
+.tint-whiteboard {
+	background: 
+		linear-gradient(
+			rgba(9, 151, 161, 0.7), 
+			rgba(9, 151, 161, 0.7)
+		),
+		url(/img/whiteboard.jpg);
+		/*Photo by Kaleidico on Unsplash*/
+		background-size: cover;
+		background-position: top;
+}
+.tint-collaboration {
+	background: 
+		linear-gradient(
+			rgba(9, 151, 161, 0.7), 
+			rgba(9, 151, 161, 0.7)
+		),
+		url(/img/laptops.jpg);
+		/*Photo by Marvin Meyer on Unsplash*/
+		background-size: cover;
+		background-position: top;
+}
+.tint-programs {
+	background: 
+		linear-gradient(
+			rgba(9, 151, 161, 0.7), 
+			rgba(9, 151, 161, 0.7)
+		),
+		url(/img/mac.jpg);
+		/*Photo by Kaitlyn Baker on Unsplash*/
+		background-size: cover;
+		background-position: center;
+}
+
+	#skills .icon-grid, 
+	#we-create .icon-grid, 
+	#we-explore .icon-grid,
+	.program-grid {
+		margin: 2em;
 		display: grid;
 		grid-template-columns: 7em 7em;
 		grid-auto-rows: 7em;
 		grid-gap: 2em;
 		justify-content: space-evenly;
 	}
-	.icon-grid {
-		padding: 2em 2em 1em;
-	}
-	.program-grid {
-		padding: 1em 2em 2em;
-	}
-
 	
 	.icon-label, .program-img li {
 		list-style: none;
@@ -261,108 +313,32 @@ OVERVIEW, SKILLS
 		align-self: center;
 	}
 	
-
 	.icon-label i {
 		font-size: 2em;
 		display: block;
 	}
 
 
-	/*Color overlays*/
-	/* .tint {
-		background: 
-		linear-gradient(
-			rgba(9, 151, 161, 0.7), 
-			rgba(9, 151, 161, 0.7)
-		),
-	} */
-	.tint-ideation {
-		background-image: 
-			linear-gradient(
-				rgba(9, 151, 161, 0.7), 
-				rgba(9, 151, 161, 0.7)
-			),
-			url(/img/ideation-sticky-note.jpg);
-			/*Photo by You X Ventures on Unsplash*/
-		background-size: cover;
-		background-position: top;
-	}
-	
-	.tint-whiteboard {
-		background: 
-			linear-gradient(
-				rgba(9, 151, 161, 0.7), 
-				rgba(9, 151, 161, 0.7)
-			),
-			url(/img/whiteboard.jpg);
-			/*Photo by Kaleidico on Unsplash*/
-			background-size: cover;
-			background-position: top;
-	}
-
-	.tint-collaboration {
-		background: 
-			linear-gradient(
-				rgba(9, 151, 161, 0.7), 
-				rgba(9, 151, 161, 0.7)
-			),
-			url(/img/laptops.jpg);
-			/*Photo by Marvin Meyer on Unsplash*/
-			background-size: cover;
-			background-position: top;
-	}
-
-	.tint-designers {
-		background: 
-			linear-gradient(
-				rgba(9, 151, 161, 0.7), 
-				rgba(9, 151, 161, 0.7)
-			),
-			url(/img/designers.jpg);
-			/*Photo by Naassom Azevedo on Unsplash*/
-			background-size: cover;
-			background-position: center;
-	}
-	.tint-programs {
-		background: 
-			linear-gradient(
-				rgba(9, 151, 161, 0.7), 
-				rgba(9, 151, 161, 0.7)
-			),
-			url(/img/mac.jpg);
-			/*Photo by Kaitlyn Baker on Unsplash*/
-			background-size: cover;
-			background-position: center;
-	}
-	.tint-projects {
-		background: 
-			linear-gradient(
-				rgba(9, 151, 161, 0.7), 
-				rgba(9, 151, 161, 0.7)
-			),
-			url(/img/art-and-design.jpg);
-			/*Photo by William Iven on Unsplash*/
-			background-size: cover;
-			background-position: center;
-	}
-
-	.tint-alumni {
-		background: 
-			linear-gradient(
-				rgba(62, 115, 119, 0.7), 
-				rgba(9, 151, 161, 0.7)
-			),
-			url(/img/grad-cap.jpg);
-			/*Image by Gillian Callison from Pixabay*/
-			background-size: cover;
-			background-position: top;
-	}
 
 /****************
 	STUDENT PROFILE
 *****************/
+.tint-designers {
+	background: 
+		linear-gradient(
+			rgba(9, 151, 161, 0.7), 
+			rgba(9, 151, 161, 0.7)
+		),
+		url(/img/designers.jpg);
+		/*Photo by Naassom Azevedo on Unsplash*/
+		background-size: cover;
+		background-position: center;
+}
+
+
 	.student-profile {
-		padding: 2em;
+		/* padding: 2em; */
+		margin: 2em;
 		display: grid;
 		grid-template-columns: 5.5em auto;
 		grid-template-areas: 
@@ -370,9 +346,6 @@ OVERVIEW, SKILLS
 		"quo quo";
 		grid-gap: 1em;
 	}
-
-	
-
 
 	.student-photo {
 		grid-area: img;
@@ -397,6 +370,17 @@ OVERVIEW, SKILLS
 /****************
 STUDENT PROJECTS
 *****************/
+.tint-projects {
+	background: 
+		linear-gradient(
+			rgba(9, 151, 161, 0.7), 
+			rgba(9, 151, 161, 0.7)
+		),
+		url(/img/art-and-design.jpg);
+		/*Photo by William Iven on Unsplash*/
+		background-size: cover;
+		background-position: center;
+}
 
 	.project-image img {
 		width: 100%;
@@ -425,6 +409,18 @@ STUDENT PROJECTS
 /****************
 CAREERS/ALUMNI
 *****************/
+.tint-alumni {
+	background: 
+		linear-gradient(
+			rgba(62, 115, 119, 0.7), 
+			rgba(9, 151, 161, 0.7)
+		),
+		url(/img/grad-cap.jpg);
+		/*Image by Gillian Callison from Pixabay*/
+		background-size: cover;
+		background-position: top;
+}
+
 #career-blurb ul {
 	padding-top: .5em;
 	padding-left: 2em;
@@ -434,7 +430,8 @@ CAREERS/ALUMNI
 .alumni-grid {	
 	display: grid;
 	grid-gap: 1em;
-	padding: 1em 2em;
+	/* padding: 1em 2em; */
+	margin: 2em;
 }
 .alumni-name h4 {
 	font-weight: 600;
@@ -530,7 +527,8 @@ MEDIA QUERY 1 640PX
 	/*Student Projects - masonry-style columns*/
 	.project-grid, .year-end-grid {
 		display: block;
-		padding: 2em;
+		/* padding: 2em; */
+		margin: 2em;
 		column-count: 2;
 		column-gap: 1em;
 	}
@@ -550,7 +548,7 @@ MEDIA QUERY 1 640PX
 	/*Careers*/
 
 	.alumni-grid {
-		padding: 2em;
+		/* padding: 2em; */
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: auto 2fr;
@@ -722,7 +720,6 @@ MEDIA QUERY 2  768PX
 			grid-auto-rows: 5em;
 			grid-gap: 1em;
 			justify-content: space-evenly;
-			padding: 2em;
 		}
 
 
@@ -817,14 +814,16 @@ MEDIA QUERY 3
 		font-size: 1.2em;
 	}
 	.topbar-grid {
-		grid-gap: 15em;
+		grid-template-columns: 1fr 3fr;
+		grid-gap: 10em;
 	}
 	
 
 
+
 	/*MAIN*/
 	.heading h2 {
-		font-size: 1.3em;
+		font-size: 1.6em;
 	}
 	.section-blurb {
 		padding: 3em 15em;
@@ -865,7 +864,7 @@ MEDIA QUERY 3
 
 	.icon-grid, #skills .icon-grid {
 		grid-template-columns: repeat(4, 1fr);
-		padding: 3em 1em ;
+		/* padding: 3em 1em ; */
 	}
 
 
@@ -899,9 +898,16 @@ MEDIA QUERY 3
 
 
 	 .project-grid, .year-end-grid {
-		padding: 2em 0;
+		padding: 2em 0 0 0;
 		column-count: 3;
 		column-gap: 2em;
+	}
+	
+	#student-projects .project-image, #year-end-show .project-image {
+		padding-bottom: 2em;
+	}
+	#student-projects .subheading {
+		padding: 3.25em;
 	}
 
 	
@@ -910,12 +916,11 @@ MEDIA QUERY 3
 		/*Careers*/
 		#career-blurb ul {
 			text-align: left; 
-			padding-left: 9em;
-			/* max-width: 700px; */
+			padding-left: 0;
 			margin: 0 auto;
 		}
 		#alumni {
-			padding: 2em 0;
+			padding: 2em 0 4em 0;
 			grid-gap: 2em;
 		}
 		.alumni-grid {
@@ -945,7 +950,7 @@ MEDIA QUERY 4
 	max-width: 1400px;
 }
 .big-container {
-	max-width: 1800px;
+	max-width: 1750px;
 	margin: 0 auto;
 }
 
@@ -968,6 +973,11 @@ MEDIA QUERY 4
 #careers, 
 footer {
 	padding-top: 4em;
+}
+
+.topbar {
+	padding: 2em 6em;
+	grid-gap: 15em;
 }
 /*Overview*/
 #overview {
@@ -1025,9 +1035,10 @@ footer {
 #programs {
 	padding: 0 2em 0 1em;
 }
-.program-grid {
-	padding-bottom: 0;
+#skills .icon-grid, .program-grid {
+	padding: 0;
 }
+
 
 .section-blurb {
 	padding: 2em;
@@ -1048,9 +1059,13 @@ footer {
 #designers-of-the-future {
 	grid-area: prof;
 	padding-left: 2em;
+	padding-top: 0;
 }
 #student-projects {
 	grid-area: proj;
+}
+#student-projects .subheading {
+	padding: 6.5em;
 }
 
 .tint-projects { 
@@ -1059,13 +1074,24 @@ footer {
 .project-grid, .year-end-grid {
 	column-count: 4;
 }
+.project-grid {
+	padding: 0;
+}
 
-
-
+#careers ul {
+	padding: 0;
+	margin: 0 auto;
+}
 #alumni {
 	grid-template-columns: 1fr 1fr 1fr;
 }
+.alumni-grid {
+	margin: 0;
+}
 
+#top-footer {
+	padding: 4em 0;
+}
 
 }/*last curly*/
 
